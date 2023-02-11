@@ -1,0 +1,14 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  --background-container: #1b1a17;
+  --background-box: #1f1e1b;
+  --heading-color: #a35709;
+  --background-sinbol: #ff8303;
+  --font-color: #f0e3ca;
+}
