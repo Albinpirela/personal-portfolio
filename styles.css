@@ -34,7 +34,6 @@ header {
   height: 7vh;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #ff8303;
 }
 
 header > img {
@@ -87,7 +86,7 @@ header > img {
   top: 19px;
   right: 40px;
   color: var(--font-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   z-index: 200;
 }
