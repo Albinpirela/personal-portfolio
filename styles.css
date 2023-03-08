@@ -2,7 +2,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family:'Courier New', Courier, monospace;
+  color: --font-color;
+  background-color: var(--background-container);
+  line-height: 0.8;
 }
 
 :root {
@@ -11,4 +14,85 @@ body {
   --heading-color: #a35709;
   --background-sinbol: #ff8303;
   --font-color: #f0e3ca;
+}
+
+img {
+  position: relative;
+  top: 10px;
+  width: 30%;
+  height: 60%;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  background-color:var(--background-container);
+  z-index: 500;
+  display: flex;
+  width: 100vw;
+  height: 7vh;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ff8303;
+ }
+ 
+  header > img {
+  position: relative;
+  left: 30px;
+ }
+
+.hamburger-menu {
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(27, 26, 23,0.9);
+  transition: all 0.5s ease;
+}
+
+/* menu desplegable */
+
+.hamburger-menu ul > li {
+  color:var( --font-color);
+  list-style: none;
+  font-size: 2.5rem;
+  line-height: 2.5;
+  cursor: pointer;
+}
+  
+.hamburger-menu ul li > a {
+  color:var( --font-color);
+  text-decoration: none;
+}
+
+.hamburger-menu ul li > a:hover{
+  color: var(--background-sinbol);
+  cursor: pointer;
+}
+
+.hamburger-menu ul li > a:focus {
+  color: var(--background-sinbol);
+  cursor: pointer;
+  outline: none;
+}
+
+.hamburger-ico {
+  vertical-align: top;
+  position: absolute;
+  top: 19px;
+  right: 40px;
+  color:var( --font-color);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* para el java scripts */
+.active {
+  transform: translate(0, -100%);
 }
