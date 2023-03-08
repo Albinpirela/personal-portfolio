@@ -2,8 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family:'Courier New', Courier, monospace;
-  color: --font-color;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--font-color);
   background-color: var(--background-container);
   line-height: 0.8;
 }
@@ -27,7 +27,7 @@ header {
   margin: 0;
   padding: 0;
   position: fixed;
-  background-color:var(--background-container);
+  background-color: var(--background-container);
   z-index: 500;
   display: flex;
   width: 100vw;
@@ -35,42 +35,42 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #ff8303;
- }
- 
-  header > img {
+}
+
+header > img {
   position: relative;
   left: 30px;
- }
+}
 
 .hamburger-menu {
   width: 100vw;
   height: 90vh;
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(27, 26, 23,0.9);
+  background-color: rgba(27, 26, 23, 0.9);
   transition: all 0.5s ease;
 }
 
 /* menu desplegable */
 
 .hamburger-menu ul > li {
-  color:var( --font-color);
+  color: var(--font-color);
   list-style: none;
   font-size: 2.5rem;
   line-height: 2.5;
   cursor: pointer;
 }
-  
+
 .hamburger-menu ul li > a {
-  color:var( --font-color);
+  color: var(--font-color);
   text-decoration: none;
 }
 
-.hamburger-menu ul li > a:hover{
+.hamburger-menu ul li > a:hover {
   color: var(--background-sinbol);
   cursor: pointer;
 }
@@ -86,7 +86,7 @@ header {
   position: absolute;
   top: 19px;
   right: 40px;
-  color:var( --font-color);
+  color: var(--font-color);
   font-size: 2rem;
   cursor: pointer;
   z-index: 200;
