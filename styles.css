@@ -36,9 +36,21 @@ header {
   align-items: center;
 }
 
-header > img {
-  position: relative;
-  left: 30px;
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 10px 0 0 15px;
+}
+
+.logo > h2 {
+  color: var(--background-sinbol)
+}
+
+h2 > span {
+  color: var(--font-color)
 }
 
 .hamburger-menu {
@@ -117,7 +129,7 @@ header > img {
   align-items: center;
   color: var(--background-sinbol);
   position: relative;
-  top: 500px;
+  top: 300px;
   width: 100%;
   height: 130vh;
 }
@@ -125,38 +137,41 @@ header > img {
 .headline-img {
   box-sizing: border-box;
   position: relative;
-  bottom: 150px;
+  bottom: 350px;
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
 }
 
 .headline-img > img {
   width: 100%;
-  height: 100%;
+  height: 60%;
 }
 
 .headline > h1 {
   position: relative;
-  bottom: 300px;
+  bottom: 400px;
   margin: 0;
   padding: 0.5em 1.5em 0 1.5em;
+  line-height: 1.5;
 }
 
 .headline > h2 {
   margin: 0;
+  line-height: 1;
   color: var(--font-color);
   padding: 0.5em 1.5em 0 1.5em;
   text-align: center;
   font-size: 1rem;
   position: relative;
-  bottom: 300px;
+  bottom: 400px;
 }
 
 .headline > p {
+  line-height: 1.5;
   color: var(--font-color);
   padding: 0.5em 2.5em 0 2.5em;
   position: relative;
-  bottom: 300px;
+  bottom: 400px;
 }
