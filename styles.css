@@ -108,8 +108,6 @@ h2 > span {
   transform: translate(0, -100%);
 }
 
-/* headline */
-
 .container {
   width: 100%;
   height: 200%;
@@ -118,6 +116,8 @@ h2 > span {
   box-sizing: border-box;
   flex-wrap: wrap;
 }
+
+/* headline */
 
 .headline {
   box-sizing: border-box;
@@ -134,10 +134,15 @@ h2 > span {
   height: 130vh;
 }
 
+/* esta es la imagen de el headline */
+
 .headline-img {
+  line-height: 1.5;
+  font-size: 1rem;
   box-sizing: border-box;
   position: relative;
   bottom: 350px;
+  padding: 0 2em;
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -145,8 +150,31 @@ h2 > span {
 }
 
 .headline-img > img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 180px;
+  margin: auto;
+  width: 60%;
+  height: 40%;
+}
+
+.headline-img > i {
+  font-size: 7rem;
+  color: var(--font-color);
+  position: absolute;
+  top: 0.4em;
+  left: 0.9em;
+}
+
+.headline-img > p {
+  color: rgba(255, 131, 3, 0.2);
+  line-height: 0.8;
+  font-size: 0.8rem;
   width: 100%;
   height: 60%;
+  z-index: 10;
 }
 
 .headline > h1 {
@@ -175,3 +203,5 @@ h2 > span {
   position: relative;
   bottom: 400px;
 }
+
+/* final del headline */
