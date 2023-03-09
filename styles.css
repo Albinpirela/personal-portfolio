@@ -166,7 +166,7 @@ h2 > span {
   font-size: 7rem;
   color: var(--font-color);
   position: relative;
-  bottom: 60%;
+  bottom: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
