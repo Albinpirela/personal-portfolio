@@ -147,7 +147,7 @@ h2 > span {
   flex-direction: column;
   width: 100vw;
   border: 1px solid #fff;
-  background-image: radial-gradient(100% 100% at 50% 100%, #1f1e1b 21.52%, #1b1a17 100%);
+  background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
 .headline-img > img {
