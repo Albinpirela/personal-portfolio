@@ -2,13 +2,211 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Times New Roman', Times, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--font-color);
+  background-color: var(--background-container);
+  line-height: 0.8;
 }
 
 :root {
   --background-container: #1b1a17;
   --background-box: #1f1e1b;
   --heading-color: #a35709;
-  --background-sinbol: #ff8303;
+  --background-symbol: #ff8303;
   --font-color: #f0e3ca;
 }
+
+img {
+  position: relative;
+  top: 10px;
+  width: 30%;
+  height: 60%;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  background-color: var(--background-container);
+  z-index: 500;
+  display: flex;
+  width: 100vw;
+  height: 7vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 10px 0 0 15px;
+}
+
+.logo > h2 {
+  color: var(--background-symbol);
+}
+
+h2 > span {
+  color: var(--font-color);
+}
+
+.hamburger-menu {
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(27, 26, 23, 0.9);
+  transition: all 0.5s ease;
+}
+
+/* dropdown menu */
+
+.hamburger-menu ul > li {
+  color: var(--font-color);
+  list-style: none;
+  font-size: 2.5rem;
+  line-height: 2;
+  cursor: pointer;
+}
+
+.hamburger-menu ul li > a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.hamburger-menu ul li > a:hover {
+  color: var(--background-symbol);
+  cursor: pointer;
+}
+
+.hamburger-menu ul li > a:focus {
+  color: var(--background-symbol);
+  cursor: pointer;
+  outline: none;
+}
+
+.hamburger-ico {
+  vertical-align: top;
+  position: absolute;
+  top: 19px;
+  right: 40px;
+  color: var(--font-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* For the java scripts */
+.active {
+  transform: translate(0, -100%);
+}
+
+.container {
+  width: 100%;
+  height: 200%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* headline */
+
+.headline {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--background-symbol);
+  position: relative;
+  top: 20em;
+  width: 100%;
+  height: 130vh;
+}
+
+/* this is the headline image */
+
+.headline-img {
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  bottom: 350px;
+  padding: 0 2.8em;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
+}
+
+.headline-img > img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 170px;
+  height: 170px;
+}
+
+.headline-img > i {
+  font-size: 7rem;
+  color: var(--font-color);
+  position: relative;
+  bottom: 51%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline-img > p {
+  color: rgba(255, 131, 3, 0.2);
+  line-height: 0.8;
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
+  height: 60%;
+}
+
+.headline > h1 {
+  position: relative;
+  bottom: 400px;
+  margin: 0;
+  padding: 0.5em 1.5em 0 1.5em;
+  line-height: 1.5;
+  font-size: 2.5rem;
+}
+
+.headline > h2 {
+  margin: 0;
+  line-height: 1;
+  color: var(--font-color);
+  padding: 0.5em 1.5em 0 1.5em;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 400px;
+}
+
+.headline > p {
+  line-height: 1.5;
+  color: var(--font-color);
+  padding: 0.5em 2.5em 0 2.5em;
+  position: relative;
+  bottom: 420px;
+  font-size: 1.5rem;
+  font-family: 'Inconsolata', 'Times New Roman', Times, serif;
+}
+
+/* headline end */
