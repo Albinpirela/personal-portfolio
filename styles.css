@@ -109,8 +109,8 @@ h2 > span {
 }
 
 .container {
-  width: 100%;
-  height: 200%;
+  width: 100%; 
+  height: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -122,16 +122,13 @@ h2 > span {
 .headline {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
+  margin-top: 6em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--background-symbol);
   position: relative;
-  top: 20em;
-  width: 100%;
-  height: 130vh;
 }
 
 /* this is the headline image */
@@ -140,8 +137,8 @@ h2 > span {
   line-height: 1.5;
   font-size: 1rem;
   box-sizing: border-box;
-  position: relative;
-  bottom: 350px;
+  position: absolute;
+  top: 25em;
   padding: 0 2.8em;
   display: flex;
   flex-direction: column;
@@ -150,7 +147,7 @@ h2 > span {
 }
 
 .headline-img > img {
-  position: absolute;
+  position:absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -160,16 +157,6 @@ h2 > span {
   height: 170px;
 }
 
-.headline-img > i {
-  font-size: 7rem;
-  color: var(--font-color);
-  position: relative;
-  bottom: 51%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .headline-img > p {
   color: rgba(255, 131, 3, 0.2);
   line-height: 0.8;
@@ -177,11 +164,10 @@ h2 > span {
   font-size: 1rem;
   width: 100%;
   height: 60%;
+
 }
 
 .headline > h1 {
-  position: relative;
-  bottom: 400px;
   margin: 0;
   padding: 0.5em 1.5em 0 1.5em;
   line-height: 1.5;
@@ -195,18 +181,33 @@ h2 > span {
   padding: 0.5em 1.5em 0 1.5em;
   text-align: center;
   font-size: 1.5rem;
-  position: relative;
-  bottom: 400px;
 }
 
 .headline > p {
   line-height: 1.5;
   color: var(--font-color);
   padding: 0.5em 2.5em 0 2.5em;
-  position: relative;
-  bottom: 420px;
   font-size: 1.5rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
 }
 
-/* headline end */
+/* about me */
+
+.about-me {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 0 3.5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 25em;
+}
+
+.about-me > p { 
+  line-height: 1.5;
+  color: var(--font-color);
+  margin-top: 3em;
+  font-size: 1.5rem;
+  font-family: 'Inconsolata', 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
