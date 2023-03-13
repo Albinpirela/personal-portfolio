@@ -260,7 +260,7 @@ li > img:hover {
 }
 
 .skill-logo > span {
-  margin-left: 3em;
+  margin-left: 0.7em;
   color: var(--font-color);
   font-size: 1.8rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
