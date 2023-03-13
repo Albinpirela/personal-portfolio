@@ -160,8 +160,8 @@ h2 > span {
 .headline-img > p {
   color: rgba(255, 131, 3, 0.2);
   line-height: 0.8;
-  text-align: center;
-  font-size: 1.5rem;
+  text-align: start;
+  font-size: 0.9rem;
   width: 100%;
   height: 60%;
 }
