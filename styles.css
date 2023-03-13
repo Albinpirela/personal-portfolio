@@ -218,6 +218,7 @@ h2 > span {
   justify-content: center;
   flex-direction: column;
   margin: auto;
+  margin-bottom:100px;
   margin-top: 10em;
   padding: 0 1em 0 1em;
   width: 100%;
@@ -245,9 +246,13 @@ h2 > span {
   align-items: center;
 }
 
+.skill-logo:hover svg {
+  fill: #ff8303;
+}
+
 .skill-logo > img {
-  width: 10%;
-  height: 10%;
+  width: 12%;
+  height: 12%;
   position: relative;
   top: -1px;
 }
@@ -308,7 +313,7 @@ li > img:hover {
   font-family: 'Inconsolata', 'Courier New', Courier, monospace;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   line-height: 25px;
   text-align: start;
 }
