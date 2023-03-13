@@ -236,7 +236,7 @@ h2 > span {
   margin-top: 20px;
   list-style: none;
   width: 90%;
-  background: linear-gradient(to left, var(--background-container), var(--background-box));
+  background: linear-gradient(to right, var(--background-container), var(--background-box));
 }
 
 .skill-logo {
@@ -248,13 +248,6 @@ h2 > span {
 
 .skill-logo:hover svg {
   fill: #ff8303;
-}
-
-.skill-logo > img {
-  width: 12%;
-  height: 12%;
-  position: relative;
-  top: -1px;
 }
 
 .works-img > img {
@@ -269,7 +262,7 @@ li > img:hover {
 .skill-logo > span {
   margin-left: 3em;
   color: var(--font-color);
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
   font-weight: 500;
 }
