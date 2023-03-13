@@ -153,8 +153,8 @@ h2 > span {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 170px;
-  height: 170px;
+  width: 400px;
+  height: 400px;
 }
 
 .headline-img > p {
@@ -260,7 +260,7 @@ li > img:hover {
 }
 
 .skill-logo > span {
-  margin-left: 3em;
+  margin-left: 0.7em;
   color: var(--font-color);
   font-size: 1.8rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
