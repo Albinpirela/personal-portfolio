@@ -259,15 +259,7 @@ h2 > span {
   font-weight: 500;
 }
 
-.skill-logo a > {
-  text-decoration: none;
-}
-
-a > svg:active path {
-  fill: #ff8303;
-}
-
-a > svg:hover path {
+.skill-logo > svg:hover path {
   fill: #ff8303;
 }
 
