@@ -47,6 +47,7 @@ header {
 
 .logo > h2 {
   color: var(--background-symbol);
+  margin-left: 15px;
 }
 
 h2 > span {
