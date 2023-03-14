@@ -246,17 +246,8 @@ h2 > span {
   align-items: center;
 }
 
-.skill-logo:hover svg {
-  fill: #ff8303;
-}
-
 .works-img > img {
   width: 100%;
-}
-
-li > img:hover {
-  height: 100%;
-  background-color: var(--background-symbol);
 }
 
 .skill-logo > span {
@@ -265,6 +256,14 @@ li > img:hover {
   font-size: 1.8rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
   font-weight: 500;
+}
+
+.skill-logo a > {
+  text-decoration: none;
+}
+
+a > svg:hover path {
+  fill: #ff8303;
 }
 
 /* my works */
