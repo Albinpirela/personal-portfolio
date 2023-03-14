@@ -14,6 +14,7 @@ body {
   --heading-color: #a35709;
   --background-symbol: #ff8303;
   --font-color: #f0e3ca;
+  --background-button:#2e2d29;
 }
 
 img {
@@ -308,12 +309,19 @@ h2 > span {
 }
 
 .blog > button {
-  width: 50%;
+  width: 60%;
   height: 50px;
   margin-bottom: 30px;
   background-color: var(--background-box);
   color: var(--font-color);
   font-size: 1.3rem;
+  border-radius: 8px;
+  background-color:var(--background-button);
+}
+
+button >span {
+  position: relative;
+  bottom: 4px;
 }
 
 .blog button > span {
