@@ -96,7 +96,7 @@ h2 > span {
 .hamburger-ico {
   vertical-align: top;
   position: absolute;
-  top: 25px;
+  top: 20px;
   right: 40px;
   color: var(--font-color);
   font-size: 1.5rem;
