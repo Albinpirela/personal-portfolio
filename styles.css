@@ -262,6 +262,10 @@ h2 > span {
   text-decoration: none;
 }
 
+a > svg:active path {
+  fill: #ff8303;
+}
+
 a > svg:hover path {
   fill: #ff8303;
 }
