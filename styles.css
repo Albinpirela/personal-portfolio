@@ -14,7 +14,7 @@ body {
   --heading-color: #a35709;
   --background-symbol: #ff8303;
   --font-color: #f0e3ca;
-  --background-button:#2e2d29;
+  --background-button: #2e2d29;
 }
 
 img {
@@ -252,6 +252,11 @@ h2 > span {
   width: 100%;
 }
 
+button > span {
+  position: relative;
+  bottom: 4px;
+}
+
 .skill-logo > span {
   margin-left: 0.7em;
   color: var(--font-color);
@@ -312,16 +317,10 @@ h2 > span {
   width: 60%;
   height: 50px;
   margin-bottom: 30px;
-  background-color: var(--background-box);
   color: var(--font-color);
   font-size: 1.3rem;
   border-radius: 8px;
-  background-color:var(--background-button);
-}
-
-button >span {
-  position: relative;
-  bottom: 4px;
+  background-color: var(--background-button);
 }
 
 .blog button > span {
