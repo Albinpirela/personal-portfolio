@@ -238,11 +238,13 @@ h2 > span {
   margin-top: 20px;
   list-style: none;
   width: 90%;
-  background: linear-gradient(to right, var(--background-container), var(--background-box));
+  background: var(--background-button);
+  border-radius: 10px;
 }
 
 .skill-logo {
   width: 100%;
+  height: 70px;
   padding-left: 2em;
   display: flex;
   align-items: center;
