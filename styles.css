@@ -125,7 +125,7 @@ h2 > span {
   width: 100%;
   max-width: 450px;
   box-sizing: border-box;
-  padding: 0;
+  padding-left: 1em;
   margin-top: 6em;
   display: flex;
   flex-direction: column;
@@ -145,9 +145,9 @@ h2 > span {
   top: 25em;
   padding: 0 2.8em;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   width: 100%;
-  max-width: 450px;
   background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
@@ -168,7 +168,9 @@ h2 > span {
   text-align: start;
   font-size: 0.9rem;
   width: 100%;
+  max-width: 450px;
   height: 60%;
+  margin: auto;
 }
 
 .headline > h1 {
