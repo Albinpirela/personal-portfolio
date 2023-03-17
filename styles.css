@@ -14,6 +14,7 @@ body {
   --heading-color: #a35709;
   --background-symbol: #ff8303;
   --font-color: #f0e3ca;
+  --background-button: #2e2d29;
 }
 
 img {
@@ -47,6 +48,7 @@ header {
 
 .logo > h2 {
   color: var(--background-symbol);
+  margin-left: 15px;
 }
 
 h2 > span {
@@ -95,7 +97,7 @@ h2 > span {
 .hamburger-ico {
   vertical-align: top;
   position: absolute;
-  top: 19px;
+  top: 20px;
   right: 40px;
   color: var(--font-color);
   font-size: 1.5rem;
@@ -110,7 +112,7 @@ h2 > span {
 
 .container {
   width: 100%;
-  height: 200%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -120,18 +122,17 @@ h2 > span {
 /* headline */
 
 .headline {
+  width: 100%;
+  max-width: 450px;
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  padding-left: 1em;
+  margin-top: 6em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--background-symbol);
   position: relative;
-  top: 20em;
-  width: 100%;
-  height: 130vh;
 }
 
 /* this is the headline image */
@@ -140,12 +141,13 @@ h2 > span {
   line-height: 1.5;
   font-size: 1rem;
   box-sizing: border-box;
-  position: relative;
-  bottom: 350px;
+  position: absolute;
+  top: 25em;
   padding: 0 2.8em;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
@@ -156,32 +158,22 @@ h2 > span {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 170px;
-  height: 170px;
-}
-
-.headline-img > i {
-  font-size: 7rem;
-  color: var(--font-color);
-  position: relative;
-  bottom: 51%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 350px;
+  height: 350px;
 }
 
 .headline-img > p {
   color: rgba(255, 131, 3, 0.2);
   line-height: 0.8;
-  text-align: center;
-  font-size: 1rem;
+  text-align: start;
+  font-size: 0.9rem;
   width: 100%;
+  max-width: 450px;
   height: 60%;
+  margin: auto;
 }
 
 .headline > h1 {
-  position: relative;
-  bottom: 400px;
   margin: 0;
   padding: 0.5em 1.5em 0 1.5em;
   line-height: 1.5;
@@ -195,18 +187,149 @@ h2 > span {
   padding: 0.5em 1.5em 0 1.5em;
   text-align: center;
   font-size: 1.5rem;
-  position: relative;
-  bottom: 400px;
 }
 
 .headline > p {
   line-height: 1.5;
   color: var(--font-color);
   padding: 0.5em 2.5em 0 2.5em;
-  position: relative;
-  bottom: 420px;
   font-size: 1.5rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
 }
 
-/* headline end */
+/* about me */
+
+.about-me {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 0 3.5em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 35em;
+}
+
+.about-me > p {
+  line-height: 1.5;
+  color: var(--font-color);
+  margin-top: 3em;
+  font-size: 1.5rem;
+  font-family: 'Inconsolata', 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+
+/* skills box */
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 10em;
+  padding: 0 1em 0 1em;
+  width: 100%;
+  box-sizing: border-box;
+  background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
+}
+
+.skills > h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--background-symbol);
+}
+
+.skills ul > li {
+  margin-top: 20px;
+  list-style: none;
+  width: 90%;
+  background: var(--background-button);
+  border-radius: 10px;
+}
+
+.skill-logo {
+  width: 100%;
+  height: 70px;
+  padding-left: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.works-img > img {
+  width: 100%;
+}
+
+button > span {
+  position: relative;
+  bottom: 4px;
+}
+
+.skill-logo > span {
+  margin-left: 0.7em;
+  color: var(--font-color);
+  font-size: 1.8rem;
+  font-family: 'Inconsolata', 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+
+.skill-logo > svg:hover path {
+  fill: #ff8303;
+}
+
+/* my works */
+
+.my-works {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2;
+  font-weight: 500;
+  background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
+}
+
+.my-works > h2 {
+  font-size: 2.5rem;
+  color: var(--background-symbol);
+}
+
+.blog {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 2em;
+  margin-top: 2em;
+  background: linear-gradient(to top, var(--background-container), var(--background-box), var(--background-container));
+}
+
+.blog > h2 {
+  color: var(--heading-color);
+}
+
+.blog > h3 {
+  border-bottom: 1px solid var(--background-symbol);
+}
+
+.blog > p {
+  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 25px;
+  text-align: start;
+}
+
+.blog > button {
+  width: 60%;
+  height: 50px;
+  margin-bottom: 30px;
+  color: var(--font-color);
+  font-size: 1.3rem;
+  border-radius: 8px;
+  background-color: var(--background-button);
+}
+
+.blog button > span {
+  font-size: 0.7rem;
+}
