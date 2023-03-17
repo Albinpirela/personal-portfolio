@@ -333,3 +333,37 @@ button > span {
 .blog button > span {
   font-size: 0.7rem;
 }
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 3;
+}
+
+.contact-form > input {
+  width: 90%;
+  padding: 7px;
+  border: none;
+  border-bottom: 3px solid var(--background-symbol);
+  background-color: var(--background-box);
+  color: var(--font-color);
+}
+
+.contact-form > textarea {
+  width: 90%;
+  padding: 7px;
+  border: none;
+  border-bottom: 3px solid var(--background-symbol);
+  background-color: var(--background-box);
+  color: var(--font-color);
+}
+
+.form-button {
+  border: none;
+  border-bottom: 3px solid var(--background-symbol);
+  color: var(--font-color);
+  background: linear-gradient(to bottom, transparent 50%, var(--background-symbol));
+}
