@@ -432,6 +432,6 @@ button > span {
   border: none;
   border-bottom: 3px solid var(--background-symbol);
   color: var(--font-color);
-  margin-bottom: 3em;
+  margin-bottom: 2.9em;
   background: linear-gradient(to bottom, transparent 50%, var(--background-symbol));
 }
