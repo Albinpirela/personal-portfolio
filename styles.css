@@ -6,6 +6,7 @@ body {
   color: var(--font-color);
   background-color: var(--background-container);
   line-height: 0.8;
+  width: 100%;
 }
 
 :root {
@@ -113,6 +114,7 @@ h2 > span {
 }
 
 /* For the java scripts */
+
 .active {
   transform: translate(0, -100%);
 }
@@ -124,6 +126,8 @@ h2 > span {
   flex-direction: column;
   box-sizing: border-box;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 /* headline */
@@ -145,16 +149,16 @@ h2 > span {
 /* this is the headline image */
 
 .headline-img {
-  line-height: 1.5;
   font-size: 1rem;
   box-sizing: border-box;
   position: absolute;
-  top: 25em;
+  top: 35em;
   padding: 0 2.8em;
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  margin: 2em 0;
   background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
@@ -165,19 +169,19 @@ h2 > span {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 350px;
-  height: 350px;
+  width: 60%;
+  height: 60%;
 }
 
 .headline-img > p {
   color: rgba(255, 131, 3, 0.2);
-  line-height: 0.8;
+  line-height: 1.5;
   text-align: start;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   width: 100%;
   max-width: 450px;
+  min-width: 280px;
   height: 60%;
-  margin: auto;
 }
 
 .headline > h1 {
@@ -213,7 +217,7 @@ h2 > span {
   padding: 0 3.5em;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 35em;
+  margin-top: 45em;
 }
 
 .about-me > p {
