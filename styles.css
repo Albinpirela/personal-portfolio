@@ -405,9 +405,9 @@ button > span {
   margin: 2em;
 }
 
-.contact-form > input:focus{
+.contact-form > input:focus {
   outline: none;
-  background:var(--background-box);
+  background: var(--background-box);
   border-bottom: 2px solid var(--background-symbol);
 }
 
@@ -421,7 +421,7 @@ button > span {
   color: var(--font-color);
 }
 
-.contact-form > textarea:focus{
+.contact-form > textarea:focus {
   outline: none;
   background-color: var(--background-box);
   color: var(--font-color);
