@@ -405,6 +405,12 @@ button > span {
   margin: 2em;
 }
 
+.contact-form > input:focus{
+  outline: none;
+  background:var(--background-box);
+  border-bottom: 2px solid var(--background-symbol);
+}
+
 .contact-form > textarea {
   width: 60%;
   padding: 7px;
@@ -413,6 +419,13 @@ button > span {
   border-bottom: 3px solid var(--background-symbol);
   background-color: var(--background-box);
   color: var(--font-color);
+}
+
+.contact-form > textarea:focus{
+  outline: none;
+  background-color: var(--background-box);
+  color: var(--font-color);
+  border-bottom: 2px solid var(--background-symbol);
 }
 
 .form-button {
