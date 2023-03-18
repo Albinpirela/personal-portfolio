@@ -46,6 +46,13 @@ header {
   margin: 10px 0 0 15px;
 }
 
+footer > h2 {
+  color: var(--background-symbol);
+  margin-left: 15px;
+  text-align: center;
+  margin-top: 100px;
+}
+
 .logo > h2 {
   color: var(--background-symbol);
   margin-left: 15px;
@@ -253,6 +260,11 @@ h2 > span {
   padding-left: 2em;
   display: flex;
   align-items: center;
+  fill: #000;
+}
+
+svg > g {
+  mix-blend-mode: normal;
 }
 
 .works-img > img {
@@ -333,6 +345,8 @@ button > span {
 .blog button > span {
   font-size: 0.7rem;
 }
+
+/* footer */
 
 .contact-form {
   width: 100%;
