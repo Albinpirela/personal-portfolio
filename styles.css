@@ -357,18 +357,58 @@ button > span {
   line-height: 3;
 }
 
+.author > p {
+  padding: 0 2em 0 2em;
+  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 25px;
+  text-align: start;
+}
+
+.author {
+  width: 100vw;
+  margin-top: 10em;
+}
+
+.author > h2 {
+  color: var(--background-symbol);
+  text-align: center;
+  margin-top: 2em;
+}
+
+.contact {
+  color: var(--background-symbol);
+  padding-left: 2em;
+  font-size: 1.3rem;
+}
+
+.contact > h3 {
+  font-size: 0.8rem;
+  margin-left: 5em;
+}
+
+.contact h3 > i {
+  margin-right: 1em;
+  color: var(--font-color);
+  font-size: 1.5rem;
+}
+
 .contact-form > input {
-  width: 90%;
+  width: 30%;
   padding: 7px;
   border: none;
   border-bottom: 3px solid var(--background-symbol);
   background-color: var(--background-box);
   color: var(--font-color);
+  margin: 2em;
 }
 
 .contact-form > textarea {
-  width: 90%;
+  width: 60%;
   padding: 7px;
+  margin: 5em;
   border: none;
   border-bottom: 3px solid var(--background-symbol);
   background-color: var(--background-box);
@@ -379,5 +419,6 @@ button > span {
   border: none;
   border-bottom: 3px solid var(--background-symbol);
   color: var(--font-color);
+  margin-bottom: 3em;
   background: linear-gradient(to bottom, transparent 50%, var(--background-symbol));
 }
