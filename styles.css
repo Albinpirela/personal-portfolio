@@ -415,35 +415,58 @@ button > span {
   font-size: 1.5rem;
 }
 
-.contact-form > input {
-  width: 30%;
-  padding: 7px;
+input {
+  width: 90%;
+  margin-right: 2em;
   border: none;
   border-bottom: 3px solid var(--background-symbol);
   background-color: var(--background-box);
   color: var(--font-color);
-  margin: 2em;
 }
 
-.contact-form > input:focus {
+label {
+  color: var(--background-symbol);
+  display: block;
+  justify-content: flex-start;
+  align-items: start;
+}
+
+.contact-form > .box {
+  width: 100%;
+  padding: 2em;
+  margin-top: 3em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-form > .box-messager {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.contact-form .box > input:focus {
   outline: none;
-  background: var(--background-box);
+  background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
   border-bottom: 2px solid var(--background-symbol);
 }
 
-.contact-form > textarea {
-  width: 60%;
+textarea {
+  width: 100%;
   padding: 7px;
-  margin: 5em;
+  margin: 0;
   border: none;
   border-bottom: 3px solid var(--background-symbol);
   background-color: var(--background-box);
   color: var(--font-color);
 }
 
-.contact-form > textarea:focus {
+textarea:focus {
   outline: none;
-  background-color: var(--background-box);
+  background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
   color: var(--font-color);
   border-bottom: 2px solid var(--background-symbol);
 }
@@ -453,5 +476,5 @@ button > span {
   border-bottom: 3px solid var(--background-symbol);
   color: var(--font-color);
   margin-bottom: 2.9em;
-  background: linear-gradient(to bottom, transparent 50%, var(--background-symbol));
+  background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
 }
