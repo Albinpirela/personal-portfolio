@@ -33,7 +33,6 @@ header {
   z-index: 500;
   display: flex;
   width: 100vw;
-  height: 7vh;
   justify-content: space-between;
   align-items: center;
 }
@@ -43,8 +42,6 @@ header {
   align-items: center;
   font-size: 1.3rem;
   box-sizing: border-box;
-  height: 100%;
-  margin: 10px 0 0 15px;
 }
 
 footer > h2 {
@@ -56,7 +53,7 @@ footer > h2 {
 
 .logo > h2 {
   color: var(--background-symbol);
-  margin-left: 15px;
+  margin-left: 0.5em;
 }
 
 h2 > span {
@@ -104,13 +101,13 @@ h2 > span {
 
 .hamburger-ico {
   vertical-align: top;
-  position: absolute;
-  top: 20px;
-  right: 40px;
+  display: flex;
+  align-items: center;
   color: var(--font-color);
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 200;
+  margin-right: 0.5em;
 }
 
 /* For the java scripts */
