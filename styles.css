@@ -664,9 +664,4 @@ textarea:focus {
     width: 80%;
     line-height: 1rem;
   }
-
-  .contact > h3 {
-    /* margin: 0;
-    padding: 0; */
-  }
 }
