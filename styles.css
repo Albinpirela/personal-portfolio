@@ -5,7 +5,6 @@ body {
   font-family: 'Times New Roman', Times, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: var(--font-color);
   background-color: var(--background-container);
-  line-height: 0.8;
   width: 100%;
 }
 
@@ -16,6 +15,10 @@ body {
   --background-symbol: #ff8303;
   --font-color: #f0e3ca;
   --background-button: #2e2d29;
+}
+
+* {
+  text-shadow: 2px 1px 1px rgba(212, 200, 178, 0.2);
 }
 
 img {
@@ -75,7 +78,7 @@ h2 > span {
 
 /* dropdown menu */
 
-.hamburger-menu ul > li {
+.hamburger-menu > ul {
   color: var(--font-color);
   list-style: none;
   font-size: 2.5rem;
@@ -131,10 +134,9 @@ h2 > span {
 
 .headline {
   width: 100%;
-  max-width: 450px;
   box-sizing: border-box;
   padding-left: 1em;
-  margin-top: 6em;
+  margin-top: 7em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,12 +151,14 @@ h2 > span {
   font-size: 1rem;
   box-sizing: border-box;
   position: absolute;
-  top: 35em;
+  top: 20em;
   padding: 0 2.8em;
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  max-width: 650px;
+  min-width: 280px;
   margin: 2em 0;
   background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
@@ -176,32 +180,30 @@ h2 > span {
   text-align: start;
   font-size: 0.7rem;
   width: 100%;
-  max-width: 450px;
-  min-width: 280px;
   height: 60%;
 }
 
-.headline > h1 {
+.headline-a > h1 {
   margin: 0;
-  padding: 0.5em 1.5em 0 1.5em;
+  text-align: center;
   line-height: 1.5;
   font-size: 2.5rem;
 }
 
-.headline > h2 {
+.headline-a > h2 {
   margin: 0;
   line-height: 1;
   color: var(--font-color);
-  padding: 0.5em 1.5em 0 1.5em;
   text-align: center;
   font-size: 1.5rem;
 }
 
-.headline > p {
-  line-height: 1.5;
+.headline-a > p {
+  line-height: 1;
   color: var(--font-color);
-  padding: 0.5em 2.5em 0 2.5em;
-  font-size: 1.5rem;
+  text-align: start;
+  padding: 0.5em 1.5em 0 1.5em;
+  font-size: 1.3rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
 }
 
@@ -214,14 +216,14 @@ h2 > span {
   padding: 0 3.5em;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 45em;
+  margin-top: 36em;
 }
 
 .about-me > p {
-  line-height: 1.5;
+  line-height: 1;
   color: var(--font-color);
   margin-top: 3em;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
   font-weight: 500;
 }
@@ -232,9 +234,8 @@ h2 > span {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: auto;
   margin-bottom: 100px;
-  margin-top: 10em;
+  margin-top: 5em;
   padding: 0 1em 0 1em;
   width: 100%;
   box-sizing: border-box;
@@ -250,18 +251,18 @@ h2 > span {
 .skills ul > li {
   margin-top: 20px;
   list-style: none;
-  width: 90%;
-  background: var(--background-button);
-  border-radius: 10px;
 }
 
 .skill-logo {
-  width: 100%;
   height: 70px;
-  padding-left: 2em;
+  padding-left: 1em;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   fill: #000;
+  width: 90%;
+  background: var(--background-button);
+  border-radius: 10px;
 }
 
 svg > g {
@@ -314,7 +315,6 @@ button > span {
   text-align: center;
   flex-direction: column;
   justify-content: center;
-  line-height: 2;
   font-weight: 500;
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
@@ -324,8 +324,22 @@ button > span {
   color: var(--background-symbol);
 }
 
+.blog > h3 {
+  width: 80%;
+  margin: 0;
+  margin-left: 1.5em;
+  line-height: 4;
+  border-bottom: 1px solid var(--background-symbol);
+  text-align: center;
+  font-size: 1rem;
+}
+
 .blog {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   box-sizing: border-box;
+  align-items: center;
   width: 100%;
   padding: 0 2em;
   margin-top: 2em;
@@ -334,10 +348,8 @@ button > span {
 
 .blog > h2 {
   color: var(--heading-color);
-}
-
-.blog > h3 {
-  border-bottom: 1px solid var(--background-symbol);
+  margin: 0;
+  font-size: 2rem;
 }
 
 .blog > p {
@@ -345,7 +357,7 @@ button > span {
   font-style: normal;
   font-weight: 500;
   font-size: 1.3rem;
-  line-height: 25px;
+  line-height: 1;
   text-align: start;
 }
 
@@ -383,23 +395,28 @@ button > span {
   font-size: 1.3rem;
   line-height: 25px;
   text-align: start;
+  max-width: 400px;
 }
 
 .author {
   width: 100vw;
   margin-top: 10em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .author > h2 {
   color: var(--background-symbol);
   text-align: center;
   margin-top: 2em;
+  font-size: 2.5rem;
 }
 
 .contact {
   color: var(--background-symbol);
   padding-left: 2em;
-  font-size: 1.3rem;
 }
 
 .contact > h3 {
@@ -478,4 +495,170 @@ textarea:focus {
   color: var(--font-color);
   margin-bottom: 2.9em;
   background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
+}
+
+@media (min-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    justify-content: center;
+  }
+
+  .hamburger-ico {
+    display: none;
+  }
+
+  .active {
+    transform: translate(0, 0);
+  }
+
+  .hamburger-menu {
+    position: relative;
+    display: flex;
+    height: 5vh;
+    align-items: center;
+    background-color: rgba(27, 26, 23, 0.9);
+    transition: all 0s;
+  }
+
+  .hamburger-menu > ul {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  .hamburger-menu ul > li {
+    margin: 1em;
+  }
+
+  .headline {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .headline-a {
+    display: flex;
+    margin-left: 4em;
+    align-items: end;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 4em;
+  }
+
+  .headline-a > p {
+    font-size: 1rem;
+  }
+
+  .headline-img {
+    width: 100%;
+    position: relative;
+    justify-content: flex-end;
+    align-items: start;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    max-width: 500px;
+  }
+
+  .headline-img > p {
+    font-size: 1rem;
+    max-width: 500px;
+    line-height: 1;
+    padding: 0;
+  }
+
+  .about-me {
+    margin-top: 5em;
+  }
+
+  .skills {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 200px;
+    padding: 0;
+    margin: 1em;
+  }
+
+  .skill-logo > span {
+    font-size: 1.1rem;
+  }
+
+  .skills ul {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    max-width: 640px;
+  }
+
+  .skill-logo > .html {
+    width: 100px;
+    height: 150px;
+  }
+
+  .skill-logo > .css {
+    width: 100px;
+    height: 150px;
+  }
+
+  .skill-logo > .js {
+    width: 100px;
+    height: 150px;
+  }
+
+  .skill-logo > .sass {
+    width: 100px;
+    height: 150px;
+  }
+
+  .skill-logo > .git {
+    width: 100px;
+    height: 150px;
+  }
+
+  .my-works {
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+  }
+
+  footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .contact {
+    margin: 0;
+    padding: 3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    line-height: 1rem;
+  }
+
+  .contact > h3 {
+    margin: 0;
+    padding: 0;
+  }
 }
