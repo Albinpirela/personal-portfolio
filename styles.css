@@ -353,17 +353,18 @@ button > span {
   box-sizing: border-box;
   align-items: center;
   width: 100%;
-  height: 22em;
   padding: 0 2em;
   margin-top: 2em;
   background: url(/image/my-work-img.png);
   background-color: rgba(10, 10, 10, 1);
   background-blend-mode: overlay;
+  background-size: cover;
 }
 
 .blog > h2 {
   color: var(--heading-color);
   margin: 0;
+  margin-top: 2em;
   font-size: 2rem;
   z-index: 1000;
 }
@@ -814,12 +815,15 @@ textarea:focus {
 
   .blog {
     width: 20%;
-    justify-content: center;
+    height: 24.5vh;
+    position: relative;
+    bottom: 7px;
     align-items: center;
+    justify-content: center;
   }
 
   .blog > h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .blog > h3 {
@@ -840,7 +844,6 @@ textarea:focus {
 
   .works-img > img {
     width: 100%;
-    height: 335px;
   }
 
   footer {
