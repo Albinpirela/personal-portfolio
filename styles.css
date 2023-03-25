@@ -41,10 +41,16 @@ header {
 }
 
 .logo {
+  justify-content: center;
   display: flex;
   align-items: center;
   font-size: 1.3rem;
   box-sizing: border-box;
+}
+
+.my-works-all {
+  display: flex;
+  flex-direction: column;
 }
 
 footer > h2 {
@@ -54,8 +60,17 @@ footer > h2 {
   margin-top: 100px;
 }
 
-.logo > h2 {
+.my-works-all > h2 {
+  text-align: center;
+  font-size: 2.5rem;
   color: var(--background-symbol);
+}
+
+.logo > h2 {
+  display: flex;
+  align-items: center;
+  color: var(--background-symbol);
+  margin: 0;
   margin-left: 0.5em;
 }
 
@@ -123,6 +138,7 @@ h2 > span {
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   box-sizing: border-box;
   flex-wrap: wrap;
@@ -157,8 +173,6 @@ h2 > span {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  max-width: 650px;
-  min-width: 280px;
   margin: 2em 0;
   background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
@@ -170,13 +184,13 @@ h2 > span {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 60%;
-  height: 60%;
+  width: 25em;
+  height: 25em;
 }
 
 .headline-img > p {
-  color: rgba(255, 131, 3, 0.2);
-  line-height: 1.5;
+  color: rgba(255, 129, 3, 0.327);
+  line-height: 1.8;
   text-align: start;
   font-size: 0.7rem;
   width: 100%;
@@ -184,9 +198,9 @@ h2 > span {
 }
 
 .headline-a {
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   line-height: 1;
 }
@@ -205,7 +219,6 @@ h2 > span {
 
 .headline-a > p {
   color: var(--font-color);
-  text-align: start;
   padding: 0.5em 1.5em 0 1.5em;
   font-size: 1.3rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
@@ -238,7 +251,7 @@ h2 > span {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 6.25em;
   margin-top: 5em;
   padding: 0 1em 0 1em;
   width: 100%;
@@ -253,7 +266,7 @@ h2 > span {
 }
 
 .skills ul > li {
-  margin-top: 20px;
+  margin-top: 1.3em;
   list-style: none;
 }
 
@@ -323,11 +336,6 @@ button > span {
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
-.my-works > h2 {
-  font-size: 2.5rem;
-  color: var(--background-symbol);
-}
-
 .blog > h3 {
   width: 80%;
   margin: 0;
@@ -345,15 +353,19 @@ button > span {
   box-sizing: border-box;
   align-items: center;
   width: 100%;
+  height: 22em;
   padding: 0 2em;
   margin-top: 2em;
-  background: linear-gradient(to top, var(--background-container), var(--background-box), var(--background-container));
+  background: url(/image/my-work-img.png);
+  background-color: rgba(10, 10, 10, 1);
+  background-blend-mode: overlay;
 }
 
 .blog > h2 {
   color: var(--heading-color);
   margin: 0;
   font-size: 2rem;
+  z-index: 1000;
 }
 
 .blog > p {
@@ -368,11 +380,14 @@ button > span {
 .blog > button {
   width: 60%;
   height: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
   color: var(--font-color);
   font-size: 1.3rem;
   border-radius: 8px;
   background-color: var(--background-button);
+  cursor: pointer;
 }
 
 .blog button > span {
@@ -404,7 +419,7 @@ button > span {
 
 .author {
   width: 100vw;
-  margin-top: 10em;
+  margin-top: 3em;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -499,14 +514,21 @@ textarea:focus {
   color: var(--font-color);
   margin-bottom: 2.9em;
   background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
+  cursor: pointer;
 }
 
 @media (min-width: 480px) {
   header {
-    display: flex;
+    width: 100%;
     flex-direction: column;
-    position: static;
     justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
   }
 
   .hamburger-ico {
@@ -520,13 +542,15 @@ textarea:focus {
   .hamburger-menu {
     position: relative;
     display: flex;
-    height: 5vh;
+    width: 100%;
+    height: 5%;
+    justify-content: center;
     align-items: center;
-    background-color: rgba(27, 26, 23, 0.9);
     transition: all 0s;
   }
 
   .hamburger-menu > ul {
+    width: 100%;
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
@@ -534,25 +558,27 @@ textarea:focus {
   }
 
   .hamburger-menu ul > li {
-    margin: 1em;
+    margin-left: 1.7em;
+    font-size: 1.5rem;
   }
 
   .headline {
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
   }
 
   .headline-a {
-    padding: 0;
+    padding: 2em;
     display: flex;
-    justify-content: end;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    width: 40%;
-    margin-left: 30%;
+    width: 50%;
+    margin-left: 50%;
     margin-bottom: 3em;
-    max-width: 250px;
+    box-sizing: border-box;
   }
 
   .headline-a > p {
@@ -568,7 +594,6 @@ textarea:focus {
     top: 0;
     margin: 0;
     padding: 0;
-    max-width: 500px;
   }
 
   .headline-img > p {
@@ -580,6 +605,7 @@ textarea:focus {
 
   .about-me {
     margin-top: 5em;
+    background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
   }
 
   .skills {
@@ -592,14 +618,15 @@ textarea:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 130px;
-    height: 200px;
+    width: 70%;
+    height: 150px;
     padding: 0;
-    margin: 1em;
+    margin: 1.5em;
   }
 
   .skill-logo > span {
     font-size: 1.1rem;
+    margin-bottom: 0.8em;
   }
 
   .skills ul {
@@ -610,38 +637,46 @@ textarea:focus {
     justify-content: center;
     flex-wrap: wrap;
     padding: 0;
-    max-width: 640px;
   }
 
   .skill-logo > .html {
-    width: 100px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
   }
 
   .skill-logo > .css {
-    width: 100px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
   }
 
   .skill-logo > .js {
-    width: 100px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
   }
 
   .skill-logo > .sass {
-    width: 100px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
   }
 
   .skill-logo > .git {
-    width: 100px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
   }
 
   .my-works {
     display: flex;
     justify-content: center;
-    max-width: 300px;
+    padding: 5em;
+    align-items: center;
+  }
+
+  .blog {
+    width: 50%;
+  }
+
+  .works-img {
+    width: 50%;
   }
 
   footer {
@@ -655,13 +690,172 @@ textarea:focus {
 
   .contact {
     margin: 0;
-    padding: 3em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     width: 80%;
     line-height: 1rem;
+  }
+
+  .contact-all {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width: 830px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .header-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo {
+    width: 30%;
+    align-items: start;
+    position: absolute;
+    left: 0;
+    z-index: 300;
+  }
+
+  .navbar > header {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .navbar .hamburger-menu > ul {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    margin-left: 40em;
+    padding: 0;
+  }
+
+  .headline {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
+  }
+
+  .headline-a {
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 0;
+    padding: 5em 05em 5em 17em;
+  }
+
+  .headline-img {
+    width: 50%;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-me {
+    margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
+  }
+
+  .about-me > img {
+    width: 150px;
+  }
+
+  .about-me > p {
+    width: 70%;
+  }
+
+  .my-works {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog {
+    width: 30%;
+    height: 335px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .works-img {
+    width: 30%;
+  }
+
+  .works-img > img {
+    width: 100%;
+    height: 335px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 2em;
+  }
+
+  .contact {
+    flex-direction: column;
+    width: 35%;
+    padding: 0;
+  }
+
+  .author {
+    width: 30%;
+    margin: 0;
+  }
+
+  .contact-all {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-form {
+    width: 20%;
+    margin: 0;
+    padding: 0;
   }
 }
