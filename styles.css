@@ -48,7 +48,7 @@ header {
   box-sizing: border-box;
 }
 
-.my-works-all {
+#my-works-all {
   display: flex;
   flex-direction: column;
 }
@@ -60,7 +60,7 @@ footer > h2 {
   margin-top: 100px;
 }
 
-.my-works-all > h2 {
+#my-works-all > h2 {
   text-align: center;
   font-size: 2.5rem;
   color: var(--background-symbol);
@@ -228,7 +228,7 @@ h2 > span {
 
 /* about me */
 
-.about-me {
+#about-me {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -238,7 +238,7 @@ h2 > span {
   margin-top: 36em;
 }
 
-.about-me > p {
+#about-me > p {
   line-height: 1;
   color: var(--font-color);
   margin-top: 3em;
@@ -249,7 +249,7 @@ h2 > span {
 
 /* skills box */
 
-.skills {
+#skills {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -261,13 +261,13 @@ h2 > span {
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
-.skills > h2 {
+#skills > h2 {
   text-align: center;
   font-size: 2.5rem;
   color: var(--background-symbol);
 }
 
-.skills ul > li {
+#skills ul > li {
   margin-top: 1.3em;
   list-style: none;
 }
@@ -437,17 +437,17 @@ button > span {
   font-size: 2.5rem;
 }
 
-.contact {
+#contact {
   color: var(--background-symbol);
   padding-left: 2em;
 }
 
-.contact > h3 {
+#contact > h3 {
   font-size: 0.8rem;
   margin-left: 5em;
 }
 
-.contact h3 > i {
+#contact h3 > i {
   margin-right: 1em;
   color: var(--font-color);
   font-size: 1.5rem;
@@ -607,12 +607,12 @@ textarea:focus {
     padding: 0.5em 5em 0 5em;
   }
 
-  .about-me {
+  #about-me {
     margin-top: 5em;
     background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
   }
 
-  .skills {
+  #skills {
     justify-content: center;
     align-items: center;
   }
@@ -633,7 +633,7 @@ textarea:focus {
     margin-bottom: 0.8em;
   }
 
-  .skills ul {
+  #skills ul {
     display: flex;
     box-sizing: border-box;
     flex-direction: row;
@@ -692,7 +692,7 @@ textarea:focus {
     margin: 0;
   }
 
-  .contact {
+  #contact {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -808,7 +808,7 @@ textarea:focus {
     padding: 0;
   }
 
-  .about-me {
+  #about-me {
     margin-top: -20px;
     display: flex;
     flex-direction: row;
@@ -818,11 +818,11 @@ textarea:focus {
     background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
   }
 
-  .about-me > img {
+  #about-me > img {
     width: 150px;
   }
 
-  .about-me > p {
+  #about-me > p {
     width: 70%;
   }
 
@@ -877,7 +877,7 @@ textarea:focus {
     margin-bottom: 2em;
   }
 
-  .contact {
+  #contact {
     flex-direction: column;
     width: 30%;
     padding: 0;
