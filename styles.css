@@ -60,18 +60,39 @@ footer > h2 {
   margin-top: 100px;
 }
 
-#my-works-all > h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: var(--background-symbol);
-}
-
 .logo > h2 {
   display: flex;
   align-items: center;
   color: var(--background-symbol);
   margin: 0;
   margin-left: 0.5em;
+}
+
+.headline-a > h2 {
+  margin: 0;
+  color: var(--font-color);
+  font-size: 1.5rem;
+}
+
+.blog > h2 {
+  color: var(--heading-color);
+  margin: 0;
+  margin-top: 2em;
+  font-size: 2rem;
+  z-index: 1000;
+}
+
+.author > h2 {
+  color: var(--background-symbol);
+  text-align: center;
+  margin-top: 2em;
+  font-size: 2.5rem;
+}
+
+#my-works-all > h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--background-symbol);
 }
 
 h2 > span {
@@ -213,12 +234,6 @@ h2 > span {
   font-size: 2.5rem;
 }
 
-.headline-a > h2 {
-  margin: 0;
-  color: var(--font-color);
-  font-size: 1.5rem;
-}
-
 .headline-a > p {
   color: var(--font-color);
   padding: 0.5em 1.5em 0 1.5em;
@@ -236,6 +251,26 @@ h2 > span {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 36em;
+}
+
+.blog > p {
+  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1;
+  text-align: start;
+}
+
+.author > p {
+  padding: 0 2em 0 2em;
+  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 25px;
+  text-align: start;
+  max-width: 400px;
 }
 
 #about-me > p {
@@ -363,23 +398,6 @@ button > span {
   background-size: cover;
 }
 
-.blog > h2 {
-  color: var(--heading-color);
-  margin: 0;
-  margin-top: 2em;
-  font-size: 2rem;
-  z-index: 1000;
-}
-
-.blog > p {
-  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.3rem;
-  line-height: 1;
-  text-align: start;
-}
-
 .blog > button {
   width: 80%;
   height: 12%;
@@ -410,17 +428,6 @@ button > span {
   max-width: 500px;
 }
 
-.author > p {
-  padding: 0 2em 0 2em;
-  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.3rem;
-  line-height: 25px;
-  text-align: start;
-  max-width: 400px;
-}
-
 .author {
   width: 100vw;
   margin-top: 3em;
@@ -428,13 +435,6 @@ button > span {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
-
-.author > h2 {
-  color: var(--background-symbol);
-  text-align: center;
-  margin-top: 2em;
-  font-size: 2.5rem;
 }
 
 #contact {
@@ -459,9 +459,9 @@ button > span {
 .contact-a h3 > div {
   display: flex;
   flex-direction: row;
-}  
+}
 
-.contact-a > h3{
+.contact-a > h3 {
   display: flex;
   flex-direction: row;
 }
@@ -706,7 +706,7 @@ textarea:focus {
   }
 
   #contact {
-    margin:2em 0;
+    margin: 2em 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -718,36 +718,34 @@ textarea:focus {
 
   .contact-all {
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
-    }
+  }
 
-  .contact-a{
+  .contact-a {
     padding: 0;
     box-sizing: border-box;
     width: 50%;
     margin: 0 2em;
   }
 
-  .contact-b{
+  .contact-b {
     padding: 0;
     box-sizing: border-box;
     width: 50%;
     margin: 0 2em;
   }
 
-  .contact-a h3{
+  .contact-a h3 {
     flex-direction: row;
   }
 
   .contact-a h3 > div {
     display: flex;
     flex-direction: column;
-  }  
+  }
 }
-
-
 
 @media (min-width: 830px) {
   .container {
@@ -857,8 +855,20 @@ textarea:focus {
     background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
   }
 
+  .works-img > img {
+    width: 100%;
+  }
+
   #about-me > img {
     width: 150px;
+  }
+
+  .blog > p {
+    font-size: 0.6rem;
+  }
+
+  .author > p {
+    padding: 0;
   }
 
   #about-me > p {
@@ -890,20 +900,12 @@ textarea:focus {
     font-size: 0.7rem;
   }
 
-  .blog > p {
-    font-size: 0.6rem;
-  }
-
   .works-img {
     width: 20%;
   }
 
   .blog > button {
     font-size: 0.7rem;
-  }
-
-  .works-img > img {
-    width: 100%;
   }
 
   footer {
@@ -914,10 +916,6 @@ textarea:focus {
     width: 100%;
     padding-bottom: 2em;
     margin-bottom: 2em;
-  }
-
-  .contact-all{
-    font-size: 0.5rem;
   }
 
   #contact {
@@ -933,10 +931,6 @@ textarea:focus {
     width: 20%;
     margin: 0;
     padding: 1em;
-  }
-
-  .author > p {
-    padding: 0;
   }
 
   .contact-all {
