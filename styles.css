@@ -747,7 +747,7 @@ textarea:focus {
   }
 }
 
-@media (min-width: 830px) {
+@media (min-width: 1200px) {
   .container {
     margin: 0;
     padding: 0;
