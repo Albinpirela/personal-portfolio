@@ -593,7 +593,6 @@ textarea:focus {
     align-items: center;
     flex-direction: column;
     width: 60%;
-    margin-left: 30%;
     margin-bottom: 3em;
     box-sizing: border-box;
   }
@@ -776,7 +775,7 @@ textarea:focus {
   .header-nav {
     width: 100%;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin: 0;
     padding: 0;
   }
@@ -807,7 +806,7 @@ textarea:focus {
     justify-content: space-around;
     box-sizing: border-box;
     position: fixed;
-    bottom: 0;
+    top: 0;
   }
 
   .navbar .hamburger-menu > ul {
