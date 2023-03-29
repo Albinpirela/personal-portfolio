@@ -53,14 +53,14 @@ header {
   flex-direction: column;
 }
 
-footer > h2 {
+footer>h2 {
   color: var(--background-symbol);
   margin-left: 15px;
   text-align: center;
   margin-top: 100px;
 }
 
-.logo > h2 {
+.logo>h2 {
   display: flex;
   align-items: center;
   color: var(--background-symbol);
@@ -68,13 +68,13 @@ footer > h2 {
   margin-left: 0.5em;
 }
 
-.headline-a > h2 {
+.headline-a>h2 {
   margin: 0;
   color: var(--font-color);
   font-size: 1.5rem;
 }
 
-.blog > h2 {
+.blog>h2 {
   color: var(--heading-color);
   margin: 0;
   margin-top: 2em;
@@ -82,20 +82,20 @@ footer > h2 {
   z-index: 1000;
 }
 
-.author > h2 {
+.author>h2 {
   color: var(--background-symbol);
   text-align: center;
   margin-top: 2em;
   font-size: 2.5rem;
 }
 
-#my-works-all > h2 {
+#my-works-all>h2 {
   text-align: center;
   font-size: 2.5rem;
   color: var(--background-symbol);
 }
 
-h2 > span {
+h2>span {
   color: var(--font-color);
 }
 
@@ -114,7 +114,7 @@ h2 > span {
 
 /* dropdown menu */
 
-.hamburger-menu > ul {
+.hamburger-menu>ul {
   color: var(--font-color);
   list-style: none;
   font-size: 2.5rem;
@@ -122,17 +122,17 @@ h2 > span {
   cursor: pointer;
 }
 
-.hamburger-menu ul li > a {
+.hamburger-menu ul li>a {
   color: var(--font-color);
   text-decoration: none;
 }
 
-.hamburger-menu ul li > a:hover {
+.hamburger-menu ul li>a:hover {
   color: var(--background-symbol);
   cursor: pointer;
 }
 
-.hamburger-menu ul li > a:focus {
+.hamburger-menu ul li>a:focus {
   color: var(--background-symbol);
   cursor: pointer;
   outline: none;
@@ -198,7 +198,7 @@ h2 > span {
   background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
-.headline-img > img {
+.headline-img>img {
   position: absolute;
   left: 0;
   right: 0;
@@ -209,7 +209,7 @@ h2 > span {
   height: 25em;
 }
 
-.headline-img > p {
+.headline-img>p {
   color: rgba(255, 129, 3, 0.327);
   line-height: 1.8;
   text-align: start;
@@ -228,13 +228,13 @@ h2 > span {
   line-height: 1;
 }
 
-.headline-a > h1 {
+.headline-a>h1 {
   margin: 0;
   line-height: 1.5;
   font-size: 2.5rem;
 }
 
-.headline-a > p {
+.headline-a>p {
   color: var(--font-color);
   padding: 0.5em 1.5em 0 1.5em;
   font-size: 1.3rem;
@@ -253,7 +253,7 @@ h2 > span {
   margin-top: 36em;
 }
 
-.blog > p {
+.blog>p {
   font-family: 'Inconsolata', 'Courier New', Courier, monospace;
   font-style: normal;
   font-weight: 500;
@@ -262,7 +262,7 @@ h2 > span {
   text-align: start;
 }
 
-.author > p {
+.author>p {
   padding: 0 2em 0 2em;
   font-family: 'Inconsolata', 'Courier New', Courier, monospace;
   font-style: normal;
@@ -273,7 +273,7 @@ h2 > span {
   max-width: 400px;
 }
 
-#about-me > p {
+#about-me>p {
   line-height: 1;
   color: var(--font-color);
   margin-top: 3em;
@@ -296,13 +296,13 @@ h2 > span {
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
-#skills > h2 {
+#skills>h2 {
   text-align: center;
   font-size: 2.5rem;
   color: var(--background-symbol);
 }
 
-#skills ul > li {
+#skills ul>li {
   margin-top: 1.3em;
   list-style: none;
 }
@@ -319,20 +319,20 @@ h2 > span {
   border-radius: 10px;
 }
 
-svg > g {
+svg>g {
   mix-blend-mode: normal;
 }
 
-.works-img > img {
+.works-img>img {
   width: 100%;
 }
 
-button > span {
+button>span {
   position: relative;
   bottom: 4px;
 }
 
-.skill-logo > span {
+.skill-logo>span {
   margin-left: 0.7em;
   color: var(--font-color);
   font-size: 1.8rem;
@@ -340,23 +340,23 @@ button > span {
   font-weight: 500;
 }
 
-.skill-logo > .html:hover path {
+.skill-logo>.html:hover path {
   fill: #fc490b;
 }
 
-.skill-logo > .css:hover path {
+.skill-logo>.css:hover path {
   fill: #2196f4;
 }
 
-.skill-logo > .js:hover path {
+.skill-logo>.js:hover path {
   fill: #ffdf00;
 }
 
-.skill-logo > .sass:hover path {
+.skill-logo>.sass:hover path {
   fill: #ca669b;
 }
 
-.skill-logo > .git:hover path {
+.skill-logo>.git:hover path {
   fill: #f25234;
 }
 
@@ -373,7 +373,7 @@ button > span {
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
-.blog > h3 {
+.blog>h3 {
   width: 80%;
   margin: 0;
   margin-left: 1.5em;
@@ -398,7 +398,7 @@ button > span {
   background-size: cover;
 }
 
-.blog > button {
+.blog>button {
   width: 80%;
   height: 12%;
   margin-bottom: 50px;
@@ -412,7 +412,7 @@ button > span {
   cursor: pointer;
 }
 
-.blog button > span {
+.blog button>span {
   font-size: 0.7rem;
 }
 
@@ -450,18 +450,18 @@ button > span {
   align-items: start;
 }
 
-.contact-all h3 > i {
+.contact-all h3>i {
   margin-right: 1.5em;
   color: var(--font-color);
   font-size: 1.5rem;
 }
 
-.contact-a h3 > div {
+.contact-a h3>div {
   display: flex;
   flex-direction: row;
 }
 
-.contact-a > h3 {
+.contact-a>h3 {
   display: flex;
   flex-direction: row;
 }
@@ -483,7 +483,7 @@ label {
   align-items: start;
 }
 
-.contact-form > .box {
+.contact-form>.box {
   width: 100%;
   padding: 2em;
   margin-top: 3em;
@@ -494,7 +494,7 @@ label {
   justify-content: center;
 }
 
-.contact-form > .box-messager {
+.contact-form>.box-messager {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -509,7 +509,7 @@ input:focus {
 }
 
 textarea {
-  width: 100%;
+  width: 80%;
   padding: 7px;
   margin: 0;
   border: none;
@@ -566,7 +566,7 @@ textarea:focus {
     transition: all 0s;
   }
 
-  .hamburger-menu > ul {
+  .hamburger-menu>ul {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -574,7 +574,7 @@ textarea:focus {
     padding: 0;
   }
 
-  .hamburger-menu ul > li {
+  .hamburger-menu ul>li {
     margin-left: 1.7em;
     font-size: 1.5rem;
   }
@@ -597,7 +597,7 @@ textarea:focus {
     box-sizing: border-box;
   }
 
-  .headline-a > p {
+  .headline-a>p {
     font-size: 1rem;
     padding: 0;
   }
@@ -612,7 +612,7 @@ textarea:focus {
     padding: 0;
   }
 
-  .headline-img > p {
+  .headline-img>p {
     font-size: 1rem;
     max-width: 500px;
     line-height: 1;
@@ -640,7 +640,7 @@ textarea:focus {
     margin: 1.5em;
   }
 
-  .skill-logo > span {
+  .skill-logo>span {
     font-size: 1.1rem;
     margin-bottom: 0.8em;
   }
@@ -655,27 +655,27 @@ textarea:focus {
     padding: 0;
   }
 
-  .skill-logo > .html {
+  .skill-logo>.html {
     width: 100%;
     height: 100%;
   }
 
-  .skill-logo > .css {
+  .skill-logo>.css {
     width: 100%;
     height: 100%;
   }
 
-  .skill-logo > .js {
+  .skill-logo>.js {
     width: 100%;
     height: 100%;
   }
 
-  .skill-logo > .sass {
+  .skill-logo>.sass {
     width: 100%;
     height: 100%;
   }
 
-  .skill-logo > .git {
+  .skill-logo>.git {
     width: 100%;
     height: 100%;
   }
@@ -740,7 +740,7 @@ textarea:focus {
     flex-direction: row;
   }
 
-  .contact-a h3 > div {
+  .contact-a h3>div {
     display: flex;
     flex-direction: column;
   }
@@ -800,7 +800,7 @@ textarea:focus {
     z-index: 300;
   }
 
-  .navbar > header {
+  .navbar>header {
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
@@ -809,7 +809,7 @@ textarea:focus {
     top: 0;
   }
 
-  .navbar .hamburger-menu > ul {
+  .navbar .hamburger-menu>ul {
     width: 100%;
     justify-content: space-around;
     align-items: center;
@@ -854,23 +854,23 @@ textarea:focus {
     background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
   }
 
-  .works-img > img {
+  .works-img>img {
     width: 100%;
   }
 
-  #about-me > img {
+  #about-me>img {
     width: 150px;
   }
 
-  .blog > p {
-    font-size: 0.6rem;
+  .blog>p {
+    font-size: 1.2rem;
   }
 
-  .author > p {
+  .author>p {
     padding: 0;
   }
 
-  #about-me > p {
+  #about-me>p {
     width: 70%;
   }
 
@@ -883,33 +883,33 @@ textarea:focus {
   }
 
   .blog {
-    width: 20%;
-    height: 24.5vh;
+    width: 30%;
+    height: 40vh;
     position: relative;
     bottom: 7px;
     align-items: center;
     justify-content: center;
   }
 
-  .blog > h2 {
-    font-size: 1rem;
+  .blog>h2 {
+    font-size: 1.5rem;
   }
 
-  .blog > h3 {
-    font-size: 0.7rem;
+  .blog>h3 {
+    font-size: 1.2rem;
   }
 
   .works-img {
-    width: 20%;
+    width: 27%;
   }
 
-  .blog > button {
-    font-size: 0.7rem;
+  .blog>button {
+    font-size: 1rem;
   }
 
   footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -917,9 +917,16 @@ textarea:focus {
     margin-bottom: 2em;
   }
 
+  .footer-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
   #contact {
     flex-direction: column;
-    width: 30%;
+    width: 60%;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -957,9 +964,41 @@ textarea:focus {
     font-size: 0.8rem;
   }
 
-  .contact-form {
-    width: 30%;
+ .contact-form {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 50vh;
     margin: 0;
     padding: 0;
+  }
+
+  .box-messager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    margin-top: 2em;
+  }
+
+  .contact-form > .box{
+    flex-direction: column;
+    width: 50%;
+    padding: 0;
+    position: relative;
+    bottom: 1.2em;
+    
+  }
+
+  .contact-form .box > label {
+    margin-bottom: 1.7em;
+  }
+
+  #email {
+    width: 83%;
   }
 }
