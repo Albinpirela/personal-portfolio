@@ -875,7 +875,7 @@ textarea:focus {
     flex-direction: row;
     margin: 0;
     padding: 0;
-    height: 95vh;
+    height: 100vh;
     background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
   }
 
