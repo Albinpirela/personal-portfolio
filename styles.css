@@ -32,12 +32,18 @@ header {
   margin: 0;
   padding: 0;
   position: fixed;
+  top: 0;
   background-color: var(--background-container);
   z-index: 500;
   display: flex;
   width: 100vw;
   justify-content: space-between;
   align-items: center;
+}
+
+.header-nav {
+  width: 100%;
+  display: flex;
 }
 
 .logo {
@@ -125,6 +131,14 @@ h2 > span {
   padding: 0;
 }
 
+nav {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .hamburger-menu {
   width: 100vw;
   height: 90vh;
@@ -148,6 +162,12 @@ h2 > span {
   cursor: pointer;
 }
 
+.hamburger-menu ul > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .hamburger-menu ul li > a {
   color: var(--font-color);
   text-decoration: none;
@@ -168,10 +188,11 @@ h2 > span {
   vertical-align: top;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: var(--font-color);
   font-size: 1.5rem;
   cursor: pointer;
-  z-index: 200;
+  z-index: 500;
   margin-right: 0.5em;
 }
 
@@ -276,7 +297,7 @@ h2 > span {
   padding: 0 3.5em;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 36em;
+  margin-top: 45em;
 }
 
 .blog > p {
@@ -349,10 +370,6 @@ svg > g {
   mix-blend-mode: normal;
 }
 
-.works-img > img {
-  width: 100%;
-}
-
 button > span {
   position: relative;
   bottom: 4px;
@@ -416,8 +433,9 @@ button > span {
   box-sizing: border-box;
   align-items: center;
   width: 100%;
+  height: 100%;
   padding: 0 2em;
-  margin-top: 2em;
+  margin: 1em;
   background: url(/image/my-work-img.png);
   background-color: rgba(10, 10, 10, 1);
   background-blend-mode: overlay;
@@ -465,6 +483,7 @@ button > span {
 }
 
 #contact {
+  display: flex;
   color: var(--background-symbol);
   justify-content: center;
   align-items: center;
@@ -557,6 +576,7 @@ textarea:focus {
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    position: fixed;
   }
 
   .logo {
@@ -577,9 +597,10 @@ textarea:focus {
   .hamburger-menu {
     position: relative;
     display: flex;
+    box-sizing: border-box;
     width: 100%;
     height: 5%;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     transition: all 0s;
   }
@@ -587,13 +608,12 @@ textarea:focus {
   .hamburger-menu > ul {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 1.2rem;
     padding: 0;
   }
 
   .hamburger-menu ul > li {
-    margin-left: 1.7em;
     font-size: 1.5rem;
   }
 
@@ -631,6 +651,9 @@ textarea:focus {
   }
 
   .headline-img > p {
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
     font-size: 1rem;
     max-width: 500px;
     line-height: 1;
@@ -709,10 +732,6 @@ textarea:focus {
     width: 50%;
   }
 
-  .works-img {
-    width: 50%;
-  }
-
   footer {
     display: flex;
     width: 100%;
@@ -724,7 +743,6 @@ textarea:focus {
 
   #contact {
     margin: 2em 0;
-    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -880,10 +898,6 @@ textarea:focus {
     background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
   }
 
-  .works-img > img {
-    width: 100%;
-  }
-
   #about-me > img {
     width: 150px;
   }
@@ -910,7 +924,7 @@ textarea:focus {
 
   .blog {
     width: 30%;
-    height: 40vh;
+    height: auto;
     position: relative;
     bottom: 7px;
     align-items: center;
@@ -923,10 +937,6 @@ textarea:focus {
 
   .blog > h3 {
     font-size: 1.2rem;
-  }
-
-  .works-img {
-    width: 27%;
   }
 
   .blog > button {
@@ -947,32 +957,32 @@ textarea:focus {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   #contact {
     flex-direction: column;
-    width: 60%;
+    width: 50%;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    left: 4em;
   }
 
-  #contact > h2 {
-    margin-right: 8em;
+  #contact > h3 {
+    text-align: center;
   }
 
   .author {
     width: 20%;
-    margin: 0;
     padding: 1em;
   }
 
   .contact-all {
-    width: 100%;
+    width: 80%;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
 
@@ -986,11 +996,11 @@ textarea:focus {
   }
 
   .contact-b {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 40%;
-    box-sizing: border-box;
     font-size: 0.8rem;
   }
 
@@ -1000,7 +1010,7 @@ textarea:focus {
     flex-direction: row;
     width: 100%;
     height: 50vh;
-    margin: 0;
+    margin-top: 3em;
     padding: 0;
   }
 
