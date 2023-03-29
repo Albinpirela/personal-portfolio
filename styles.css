@@ -320,6 +320,11 @@ nav {
   max-width: 400px;
 }
 
+.author > h2 {
+  margin: 0;
+  padding: 0;
+}
+
 #about-me > p {
   line-height: 1;
   color: var(--font-color);
@@ -978,7 +983,6 @@ textarea:focus {
 
   .author {
     width: 20%;
-    padding: 1em;
   }
 
   .contact-all {
