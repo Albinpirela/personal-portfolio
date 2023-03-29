@@ -484,11 +484,13 @@ button > span {
 
 #contact {
   display: flex;
+  flex-direction: column;
   color: var(--background-symbol);
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0 2em;
+  margin: 2em 0;
 }
 
 .contact-all {
