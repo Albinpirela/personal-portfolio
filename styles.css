@@ -91,6 +91,8 @@ footer > h2 {
 .author > h2 {
   color: var(--background-symbol);
   text-align: center;
+  margin: 0;
+  padding: 0;
   margin-top: 2em;
   font-size: 2.5rem;
 }
@@ -256,7 +258,7 @@ nav {
   bottom: 0;
   margin: auto;
   width: auto;
-  height:auto;
+  height: auto;
 }
 
 .headline-img > p {
@@ -322,11 +324,6 @@ nav {
   line-height: 25px;
   text-align: start;
   max-width: 400px;
-}
-
-.author > h2 {
-  margin: 0;
-  padding: 0;
 }
 
 #about-me > p {
