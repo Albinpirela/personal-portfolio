@@ -950,10 +950,11 @@ textarea:focus {
   }
 
   .footer-contacts {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
   }
 
   #contact {
@@ -963,11 +964,14 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 4em;
+    left: 10em;
   }
 
-  #contact > h3 {
+  #contact > h2 {
     text-align: center;
+    font-size: 2rem;
+    margin-right: 5em;
+    margin-bottom: 2em;
   }
 
   .author {
@@ -978,16 +982,17 @@ textarea:focus {
   }
 
   .contact-all {
-    width: 80%;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 
   .contact-a {
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 40%;
     box-sizing: border-box;
     font-size: 0.8rem;
