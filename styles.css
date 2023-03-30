@@ -754,6 +754,10 @@ textarea:focus {
     line-height: 1rem;
   }
 
+  #contact > h2 {
+    margin-right: 3em;
+  }
+
   .contact-all {
     width: 100%;
     flex-direction: row;
