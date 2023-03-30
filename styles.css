@@ -373,7 +373,7 @@ svg > g {
 
 button > span {
   position: relative;
-  bottom: 4px;
+  bottom: 1px;
 }
 
 .skill-logo > span {
