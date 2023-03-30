@@ -445,7 +445,6 @@ button > span {
 
 .blog > button {
   width: 80%;
-  height: 12%;
   margin-bottom: 50px;
   display: flex;
   align-items: center;
@@ -941,6 +940,7 @@ textarea:focus {
 
   .blog > button {
     font-size: 1rem;
+    height: 6vh;
   }
 
   footer {
