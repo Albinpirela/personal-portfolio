@@ -6,8 +6,8 @@ body {
   color: var(--font-color);
   background-color: var(--background-container);
   width: 100%;
-  scroll-padding-top: 3em;
-  scroll-margin-top: 3em;
+  scroll-padding-top: 4em;
+  scroll-margin-top: 4em;
 }
 
 :root {
@@ -661,6 +661,12 @@ label {
     box-sizing: border-box;
   }
 
+  .headline-a > h1 {
+    font-size: 2.5rem;
+    padding: 0;
+    margin-top: 3em;
+  }
+
   .headline-a > p {
     font-size: 1rem;
     padding: 0;
@@ -668,11 +674,12 @@ label {
 
   .headline-img {
     width: 100%;
+    height: 40vh;
     position: relative;
     justify-content: flex-end;
     align-items: start;
     top: 0;
-    margin: 0;
+    margin: 2em 0;
     padding: 2em 0;
   }
 
@@ -688,9 +695,10 @@ label {
 
   #about-me {
     margin-top: 5em;
+    height: 100%;
     background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
     flex-direction: row;
-    padding: 0;
+    padding-top: 2em;
   }
 
   #about-me > img {
