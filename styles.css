@@ -2,10 +2,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', Times, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'inconsolata', 'Times New Roman', Times, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: var(--font-color);
   background-color: var(--background-container);
   width: 100%;
+  scroll-padding-top: 3em;
+  scroll-margin-top: 3em;
 }
 
 :root {
@@ -50,6 +52,7 @@ header {
 }
 
 #my-works-all {
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
 }
@@ -96,6 +99,7 @@ footer > h2 {
   text-align: center;
   font-size: 2.5rem;
   color: var(--background-symbol);
+  margin-top: 2em;
 }
 
 h2 > span {
@@ -345,6 +349,7 @@ nav {
 }
 
 #skills > h2 {
+  margin-top: 3em;
   text-align: center;
   font-size: 2.5rem;
   color: var(--background-symbol);
@@ -356,7 +361,7 @@ nav {
 }
 
 .skill-logo {
-  height: 70px;
+  height: 5vh;
   padding-left: 1em;
   display: flex;
   justify-content: flex-start;
@@ -436,7 +441,7 @@ button > span {
   width: 100%;
   height: 100%;
   padding: 0 2em;
-  margin: 0;
+  margin: 1em 0;
   background: url(/image/my-work-img.png);
   background-color: rgba(10, 10, 10, 1);
   background-blend-mode: overlay;
@@ -517,6 +522,40 @@ input {
   color: var(--font-color);
 }
 
+input:focus {
+  outline: none;
+  background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
+  border-bottom: 2px solid var(--background-symbol);
+}
+
+textarea {
+  width: 80%;
+  padding: 7px;
+  margin: 0;
+  border: none;
+  border-bottom: 3px solid var(--background-symbol);
+  background-color: var(--background-box);
+  color: var(--font-color);
+}
+
+textarea:focus {
+  outline: none;
+  background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
+  color: var(--font-color);
+  border-bottom: 2px solid var(--background-symbol);
+}
+
+input:-webkit-autofill, /*so that the automatic selection of the input has styles*/
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--background-button) inset;
+  -webkit-text-fill-color: var(--font-color);
+  caret-color: var(--font-color);
+}
+
 label {
   color: var(--background-symbol);
   display: block;
@@ -539,29 +578,6 @@ label {
   flex-direction: column;
   box-sizing: border-box;
   justify-content: center;
-}
-
-input:focus {
-  outline: none;
-  background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
-  border-bottom: 2px solid var(--background-symbol);
-}
-
-textarea {
-  width: 80%;
-  padding: 7px;
-  margin: 0;
-  border: none;
-  border-bottom: 3px solid var(--background-symbol);
-  background-color: var(--background-box);
-  color: var(--font-color);
-}
-
-textarea:focus {
-  outline: none;
-  background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
-  color: var(--font-color);
-  border-bottom: 2px solid var(--background-symbol);
 }
 
 .form-button {
@@ -627,10 +643,10 @@ textarea:focus {
   }
 
   .headline-a {
-    padding: 2em;
+    padding: 2em 4em;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     flex-direction: column;
     width: 60%;
     margin-bottom: 3em;
@@ -667,9 +683,28 @@ textarea:focus {
     background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
   }
 
+  #about-me > img {
+    width: 150px;
+    height: 150px;
+  }
+
   #skills {
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0;
+  }
+
+  #skills ul > li {
+    width: 230px;
+    margin: 1em;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .skill-logo {
@@ -677,15 +712,15 @@ textarea:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
-    height: 150px;
+    width: 90%;
+    height: 300px;
     padding: 0;
-    margin: 1.5em;
+    margin: 0;
   }
 
   .skill-logo > span {
-    font-size: 1.1rem;
-    margin-bottom: 0.8em;
+    font-size: 2rem;
+    margin: 0.8em 0 0.8em 0;
   }
 
   #skills ul {
@@ -699,28 +734,28 @@ textarea:focus {
   }
 
   .skill-logo > .html {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
   }
 
   .skill-logo > .css {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 80%;
   }
 
   .skill-logo > .js {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
   }
 
   .skill-logo > .sass {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
   }
 
   .skill-logo > .git {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
   }
 
   .my-works {
@@ -732,6 +767,7 @@ textarea:focus {
 
   .blog {
     width: 50%;
+    margin: 1em;
   }
 
   footer {
@@ -873,7 +909,7 @@ textarea:focus {
   .headline-a {
     width: 50%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
     margin-left: 0;
     padding: 5em 05em 5em 17em;
@@ -899,6 +935,7 @@ textarea:focus {
 
   #about-me > img {
     width: 100px;
+    height: 100px;
   }
 
   .blog > p {
