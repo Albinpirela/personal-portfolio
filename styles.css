@@ -595,6 +595,7 @@ label {
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: fixed;
   }
 
@@ -602,6 +603,10 @@ label {
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin: 0;
+  }
+
+  .logo > h2 {
     margin: 0;
   }
 
@@ -641,6 +646,8 @@ label {
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    padding: 0;
+    margin: 2em 0;
   }
 
   .headline-a {
@@ -666,7 +673,7 @@ label {
     align-items: start;
     top: 0;
     margin: 0;
-    padding: 0;
+    padding: 2em 0;
   }
 
   .headline-img > p {
