@@ -674,7 +674,6 @@ label {
 
   .headline-img {
     width: 100%;
-    height: 40vh;
     position: relative;
     justify-content: flex-end;
     align-items: start;
@@ -935,7 +934,7 @@ label {
     justify-content: start;
     align-items: start;
     margin-left: 0;
-    padding: 5em 05em 5em 17em;
+    padding: 0 05em 9em 17em;
   }
 
   .headline-img {
