@@ -530,6 +530,7 @@ input:focus {
 
 textarea {
   width: 80%;
+  height: 30px;
   padding: 7px;
   margin: 0;
   border: none;
@@ -681,11 +682,18 @@ label {
   #about-me {
     margin-top: 5em;
     background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
+    flex-direction: row;
+    padding: 0;
   }
 
   #about-me > img {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
+  }
+
+  #about-me > p {
+    width: 70%;
+    margin: 1em 1em 0 1em;
   }
 
   #skills {
@@ -925,6 +933,7 @@ label {
 
   #about-me {
     margin-top: -20px;
+    padding: 0 10em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1083,5 +1092,6 @@ label {
 
   #email {
     width: 83%;
+    margin-bottom: 0.8em;
   }
 }
