@@ -448,6 +448,11 @@ button > span {
   background-size: cover;
 }
 
+.blog:hover {
+  background-color: rgba(10, 10, 10, 0);
+  color: var(--background-symbol);
+}
+
 .blog > button {
   width: 80%;
   margin-bottom: 50px;
