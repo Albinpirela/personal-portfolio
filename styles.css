@@ -17,7 +17,7 @@ body {
   --background-symbol: #ff8303;
   --font-color: #f0e3ca;
   --background-button: #2e2d29;
-  --background-button-hover: #302e25;
+  --background-button-hover: #1d1c19;
 }
 
 /* * {
@@ -473,10 +473,24 @@ button > span {
   cursor: pointer;
 }
 
-.blog > button:hover {
-  animation-name: animation;
-  animation-duration: 0.3s;
+.blog > button:active {
+  animation-name: button;
+  animation-duration: 0.2s;
   background-color: var(--background-button-hover);
+}
+
+@keyframes button {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .blog button > span {
