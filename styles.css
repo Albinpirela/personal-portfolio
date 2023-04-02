@@ -79,14 +79,6 @@ footer > h2 {
   font-size: 1.5rem;
 }
 
-.blog > h2 {
-  color: var(--heading-color);
-  margin: 0;
-  margin-top: 2em;
-  font-size: 2rem;
-  z-index: 1000;
-}
-
 .author > h2 {
   color: var(--background-symbol);
   text-align: center;
@@ -94,6 +86,14 @@ footer > h2 {
   padding: 0;
   margin-top: 2em;
   font-size: 2.5rem;
+}
+
+ul .blog > h2 {
+  color: var(--heading-color);
+  margin: 0;
+  margin-top: 2em;
+  font-size: 2rem;
+  z-index: 1000;
 }
 
 #my-works-all > h2 {
@@ -105,6 +105,10 @@ footer > h2 {
 
 h2 > span {
   color: var(--font-color);
+}
+
+.blog > a {
+  text-decoration: none;
 }
 
 .contact-a ul li > a {
@@ -307,15 +311,6 @@ nav {
   margin-top: 45em;
 }
 
-.blog > p {
-  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.3rem;
-  line-height: 1;
-  text-align: start;
-}
-
 .author > p {
   padding: 0 2em 0 2em;
   font-family: 'Inconsolata', 'Courier New', Courier, monospace;
@@ -325,6 +320,15 @@ nav {
   line-height: 25px;
   text-align: start;
   max-width: 400px;
+}
+
+ul .blog > p {
+  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1;
+  text-align: start;
 }
 
 #about-me > p {
@@ -355,6 +359,13 @@ nav {
   text-align: center;
   font-size: 2.5rem;
   color: var(--background-symbol);
+}
+
+.my-works ul > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 #skills ul > li {
@@ -429,6 +440,16 @@ button > span {
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
+.my-works > ul {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
 .blog > h3 {
   width: 80%;
   margin: 0;
@@ -439,7 +460,7 @@ button > span {
   font-size: 1rem;
 }
 
-.blog {
+ul li > .blog {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -461,8 +482,8 @@ button > span {
   transition: all 0.8s;
 }
 
-.blog > button {
-  width: 80%;
+.blog a > button {
+  width: 100%;
   margin-bottom: 50px;
   display: flex;
   align-items: center;
@@ -474,7 +495,12 @@ button > span {
   cursor: pointer;
 }
 
-.blog > button:active {
+.blog a > button:hover {
+  animation-name: button;
+  animation-duration: 0.5s;
+}
+
+.blog a > button:active {
   animation-name: button;
   animation-duration: 0.1s;
 }
@@ -482,18 +508,24 @@ button > span {
 @keyframes button {
   0% {
     transform: scale(1);
+    rotate: 0deg;
+    background-color: var(--background-button);
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale(1.5);
+    rotate: 5deg;
+    background-color: var(--background-button-hover);
   }
 
   100% {
     transform: scale(1);
+    rotate: 0deg;
+    background-color: var(--background-button);
   }
 }
 
-.blog button > span {
+.blog a button > span {
   font-size: 0.7rem;
 }
 
@@ -839,7 +871,7 @@ label {
   }
 
   .blog {
-    width: 50%;
+    width: 100%;
     margin: 1em;
   }
 
@@ -962,6 +994,15 @@ label {
     width: 50%;
   }
 
+  .my-works > ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 80%;
+  }
+
   .navbar nav .hamburger-menu > ul {
     width: 100%;
     justify-content: space-around;
@@ -1012,12 +1053,12 @@ label {
     height: 100px;
   }
 
-  .blog > p {
-    font-size: 1.2rem;
-  }
-
   .author > p {
     padding: 0;
+  }
+
+  ul .blog > p {
+    font-size: 1.2rem;
   }
 
   #about-me > p {
@@ -1045,10 +1086,19 @@ label {
 
   .my-works {
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    width: 100%;
+    background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
+    padding: 0;
+    margin-bottom: 2em;
+  }
+
+  .my-works > ul > li {
+    width: 80%;
+    height: 80%;
+    margin: 1em;
+    padding: 0;
   }
 
   .blog {
@@ -1057,11 +1107,11 @@ label {
     position: relative;
     bottom: 7px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     transition: 0.5s;
   }
 
-  .blog:hover {
+  ul .blog:hover {
     transform: scale(1.1);
     transition: 0.5s;
     animation-name: bloghover;
@@ -1081,15 +1131,15 @@ label {
     }
   }
 
-  .blog > h2 {
+  ul .blog > h2 {
     font-size: 1.5rem;
   }
 
-  .blog > h3 {
+  ul .blog > h3 {
     font-size: 1.2rem;
   }
 
-  .blog > button {
+  ul .blog a > button {
     font-size: 1rem;
     height: 6vh;
   }
