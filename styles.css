@@ -17,6 +17,7 @@ body {
   --background-symbol: #ff8303;
   --font-color: #f0e3ca;
   --background-button: #2e2d29;
+  --background-button-hover: #302e25;
 }
 
 /* * {
@@ -391,22 +392,27 @@ button > span {
 
 .skill-logo > .html:hover path {
   fill: #fc490b;
+  transition: 0.4s;
 }
 
 .skill-logo > .css:hover path {
   fill: #2196f4;
+  transition: 0.4s;
 }
 
 .skill-logo > .js:hover path {
   fill: #ffdf00;
+  transition: 0.4s;
 }
 
 .skill-logo > .sass:hover path {
   fill: #ca669b;
+  transition: 0.4s;
 }
 
 .skill-logo > .git:hover path {
   fill: #f25234;
+  transition: 0.4s;
 }
 
 /* my works */
@@ -451,6 +457,7 @@ button > span {
 .blog:hover {
   background-color: rgba(10, 10, 10, 0);
   color: var(--background-symbol);
+  transition: all 0.8s;
 }
 
 .blog > button {
@@ -464,6 +471,12 @@ button > span {
   border-radius: 8px;
   background-color: var(--background-button);
   cursor: pointer;
+}
+
+.blog > button:hover {
+  animation-name: animation;
+  animation-duration: 0.3s;
+  background-color: var(--background-button-hover);
 }
 
 .blog button > span {
@@ -745,6 +758,11 @@ label {
     margin: 0;
   }
 
+  .skill-logo:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+  }
+
   .skill-logo > span {
     font-size: 2rem;
     margin: 0.8em 0 0.8em 0;
@@ -976,6 +994,25 @@ label {
 
   #about-me > p {
     width: 70%;
+  }
+
+  .skill-logo:hover {
+    animation-name: skills;
+    animation-duration: 0.8s;
+  }
+
+  @keyframes skills {
+    0% {
+      top: 0;
+    }
+
+    50% {
+      transform: scale(1.5);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
 
   .my-works {
