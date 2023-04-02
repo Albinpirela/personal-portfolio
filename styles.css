@@ -118,10 +118,26 @@ h2 > span {
   flex-direction: row;
 }
 
+.contact-all a h3 > i {
+  margin-right: 1.5em;
+  color: var(--font-color);
+  font-size: 1.5rem;
+}
+
+.contact-a ul li a h3 > i:hover {
+  color: var(--background-symbol);
+  transition: 1s;
+}
+
 .contact-a > ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.contact-b ul li a h3 > i:hover {
+  color: var(--background-symbol);
+  transition: 1s;
 }
 
 .contact-b ul li > a {
@@ -521,6 +537,7 @@ ul li > .blog {
 .blog a > button:active {
   animation-name: button;
   animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes button {
@@ -586,12 +603,6 @@ ul li > .blog {
   justify-content: start;
   align-items: start;
   padding: 0;
-}
-
-.contact-all a h3 > i {
-  margin-right: 1.5em;
-  color: var(--font-color);
-  font-size: 1.5rem;
 }
 
 input {
@@ -833,7 +844,7 @@ label {
     }
 
     50% {
-      transform: scale(1.1);
+      transform: scale(1.5);
     }
 
     100% {
