@@ -17,7 +17,7 @@ body {
   --background-symbol: #ff8303;
   --font-color: #f0e3ca;
   --background-button: #2e2d29;
-  --background-button-hover: #1d1c19;
+  --background-button-hover: #49463c;
 }
 
 /* * {
@@ -475,8 +475,7 @@ button > span {
 
 .blog > button:active {
   animation-name: button;
-  animation-duration: 0.2s;
-  background-color: var(--background-button-hover);
+  animation-duration: 0.1s;
 }
 
 @keyframes button {
@@ -773,8 +772,22 @@ label {
   }
 
   .skill-logo:hover {
-    transform: scale(1.1);
     transition: all 0.5s;
+    animation-name: skill;
+  }
+
+  @keyframes skill {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1.2);
+    }
   }
 
   .skill-logo > span {
@@ -1044,6 +1057,27 @@ label {
     bottom: 7px;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
+  }
+
+  .blog:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    animation-name: bloghover;
+  }
+
+  @keyframes bloghover {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1.1);
+    }
   }
 
   .blog > h2 {
