@@ -178,6 +178,7 @@ nav {
 .hamburger-menu ul li > a:hover {
   color: var(--background-symbol);
   cursor: pointer;
+  transition: 1s;
 }
 
 .hamburger-menu ul li > a:focus {
