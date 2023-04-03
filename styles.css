@@ -108,6 +108,7 @@ h2 > span {
 }
 
 .blog > a {
+  width: 60%;
   text-decoration: none;
 }
 
@@ -516,11 +517,6 @@ ul li > .blog {
   transition: all 0.8s;
 }
 
-.blog > a {
-width: 60%;
-}
-
-
 .blog a > button {
   width: 100%;
   height: 50px;
@@ -550,7 +546,8 @@ width: 60%;
 
   50% {
     transform: scale(1.2);
-    background-color: var(--background-button-hover);}
+    background-color: var(--background-button-hover);
+  }
 
   100% {
     transform: scale(1);
