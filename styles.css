@@ -626,9 +626,9 @@ ul li > .blog {
   display: flex;
   flex-direction: column;
   color: var(--background-symbol);
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  text-align: center;
+  text-align: start;
   padding: 0 2em;
   margin: 2em 0;
 }
@@ -644,6 +644,7 @@ ul li > .blog {
 }
 
 .contact-all {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -736,7 +737,7 @@ label {
   animation-duration: 3s;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 500px) {
   header {
     width: 100%;
     flex-direction: column;
