@@ -125,9 +125,17 @@ h2 > span {
   font-size: 1.5rem;
 }
 
+.contact-all a h3 > .discord {
+  fill: #fff;
+  position: relative;
+  right: 5px;
+}
+
 .contact-all a h3 > .liked {
   fill: #fff;
   mix-blend-mode: normal;
+  position: relative;
+  right: 3px;
 }
 
 .skill-logo > .html:hover path {
@@ -195,8 +203,11 @@ button > span {
 }
 
 .contact-a a h3 > span {
-  margin-left: 1.6em;
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 1.2em;
+  font-size: 1.2rem;
 }
 
 .contact-a a h3 > .discord {
@@ -710,16 +721,17 @@ label {
 }
 
 .form-button {
+  width: 100px;
+  height: 40px;
   border-radius: 5px;
-  border-bottom: 3px solid var(--background-symbol);
-  color: var(--font-color);
+  color: var(--background-symbol);
   margin-bottom: 2.9em;
   background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
   cursor: pointer;
 }
 
 .contact-form > .form-button:active {
-  animation-name: animacion-inversa;
+  animation-name: reverse-animation;
   transition: 0.4s;
   animation-duration: 3s;
 }
@@ -962,10 +974,6 @@ label {
     align-items: center;
     width: 100%;
     line-height: 1rem;
-  }
-
-  #contact > h2 {
-    margin-right: 3em;
   }
 
   .contact-all {
@@ -1220,7 +1228,7 @@ label {
   }
 
   .footer-contacts {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1240,8 +1248,9 @@ label {
   #contact > h2 {
     text-align: center;
     font-size: 2rem;
-    margin-right: 5em;
-    margin-bottom: 2em;
+    position: relative;
+    right: 2em;
+    bottom: 0.5em;
   }
 
   .author {
