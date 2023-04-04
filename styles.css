@@ -17,6 +17,7 @@ body {
   --background-symbol: #ff8303;
   --font-color: #f0e3ca;
   --background-button: #2e2d29;
+  --background-button-hover: #49463c;
 }
 
 /* * {
@@ -52,7 +53,7 @@ header {
 }
 
 #my-works-all {
-  margin-top: 2em;
+  margin: 2em 0 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -78,14 +79,6 @@ footer > h2 {
   font-size: 1.5rem;
 }
 
-.blog > h2 {
-  color: var(--heading-color);
-  margin: 0;
-  margin-top: 2em;
-  font-size: 2rem;
-  z-index: 1000;
-}
-
 .author > h2 {
   color: var(--background-symbol);
   text-align: center;
@@ -93,6 +86,14 @@ footer > h2 {
   padding: 0;
   margin-top: 2em;
   font-size: 2.5rem;
+}
+
+ul .blog > h2 {
+  color: var(--heading-color);
+  margin: 0;
+  margin-top: 2em;
+  font-size: 2rem;
+  z-index: 1000;
 }
 
 #my-works-all > h2 {
@@ -106,6 +107,11 @@ h2 > span {
   color: var(--font-color);
 }
 
+.blog > a {
+  width: 60%;
+  text-decoration: none;
+}
+
 .contact-a ul li > a {
   text-decoration: none;
   color: var(--background-symbol);
@@ -113,10 +119,115 @@ h2 > span {
   flex-direction: row;
 }
 
+.contact-all a h3 > i {
+  margin-right: 1.5em;
+  color: var(--font-color);
+  font-size: 1.5rem;
+}
+
+.contact-all a h3 > .discord {
+  fill: #fff;
+  position: relative;
+  right: 5px;
+}
+
+.contact-all a h3 > .liked {
+  fill: #fff;
+  mix-blend-mode: normal;
+  position: relative;
+  right: 3px;
+}
+
+.skill-logo > .html:hover path {
+  fill: #fc490b;
+  transition: 0.4s;
+}
+
+.skill-logo > .css:hover path {
+  fill: #2196f4;
+  transition: 0.4s;
+}
+
+.skill-logo > .js:hover path {
+  fill: #ffdf00;
+  transition: 0.4s;
+}
+
+.skill-logo > .sass:hover path {
+  fill: #ca669b;
+  transition: 0.4s;
+}
+
+.skill-logo > .git:hover path {
+  fill: #f25234;
+  transition: 0.4s;
+}
+
+.contact-all a h3 > .liked:hover path {
+  fill: #ff8303;
+  transition: 1s;
+}
+
+.contact-a ul li a h3 > i:hover {
+  color: var(--background-symbol);
+  transition: 1s;
+}
+
+.blog > h3 {
+  width: 80%;
+  margin: 0;
+  margin-left: 1.5em;
+  line-height: 4;
+  border-bottom: 1px solid var(--background-symbol);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.contact-a a > h3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+button > span {
+  position: relative;
+  bottom: 1px;
+}
+
+.skill-logo > span {
+  margin-left: 0.7em;
+  color: var(--font-color);
+  font-size: 1.8rem;
+  font-family: 'Inconsolata', 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+
+.contact-a a h3 > span {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 1.2em;
+  font-size: 1.2rem;
+}
+
+.contact-a a h3 > .discord {
+  fill: #fff;
+}
+
+.contact-a a h3 > .discord:hover path {
+  fill: #ff8303;
+  transition: 1s;
+}
+
 .contact-a > ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.contact-b ul li a h3 > i:hover {
+  color: var(--background-symbol);
+  transition: 1s;
 }
 
 .contact-b ul li > a {
@@ -177,6 +288,7 @@ nav {
 .hamburger-menu ul li > a:hover {
   color: var(--background-symbol);
   cursor: pointer;
+  transition: 1s;
 }
 
 .hamburger-menu ul li > a:focus {
@@ -237,7 +349,7 @@ nav {
   box-sizing: border-box;
   position: absolute;
   top: 20em;
-  padding: 0 2.8em;
+  padding: 1em 2.8em 2em;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -305,15 +417,6 @@ nav {
   margin-top: 45em;
 }
 
-.blog > p {
-  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.3rem;
-  line-height: 1;
-  text-align: start;
-}
-
 .author > p {
   padding: 0 2em 0 2em;
   font-family: 'Inconsolata', 'Courier New', Courier, monospace;
@@ -323,6 +426,15 @@ nav {
   line-height: 25px;
   text-align: start;
   max-width: 400px;
+}
+
+ul .blog > p {
+  font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1;
+  text-align: start;
 }
 
 #about-me > p {
@@ -340,9 +452,8 @@ nav {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 6.25em;
-  margin-top: 5em;
-  padding: 0 1em 0 1em;
+  margin: 5em 0 6.25em 0;
+  padding: 0 1em;
   width: 100%;
   box-sizing: border-box;
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
@@ -355,13 +466,48 @@ nav {
   color: var(--background-symbol);
 }
 
-#skills ul > li {
-  margin-top: 1.3em;
+.my-works ul > li {
   list-style: none;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-works > ul {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+#skills ul {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#skills ul > li {
+  margin: 0 1em;
+  padding: 0;
+  list-style: none;
+  width: 100%;
 }
 
 .skill-logo {
-  height: 5vh;
+  height: 7vh;
+  margin: 0.5em 0;
   padding-left: 1em;
   display: flex;
   justify-content: flex-start;
@@ -376,43 +522,11 @@ svg > g {
   mix-blend-mode: normal;
 }
 
-button > span {
-  position: relative;
-  bottom: 1px;
-}
-
-.skill-logo > span {
-  margin-left: 0.7em;
-  color: var(--font-color);
-  font-size: 1.8rem;
-  font-family: 'Inconsolata', 'Times New Roman', Times, serif;
-  font-weight: 500;
-}
-
-.skill-logo > .html:hover path {
-  fill: #fc490b;
-}
-
-.skill-logo > .css:hover path {
-  fill: #2196f4;
-}
-
-.skill-logo > .js:hover path {
-  fill: #ffdf00;
-}
-
-.skill-logo > .sass:hover path {
-  fill: #ca669b;
-}
-
-.skill-logo > .git:hover path {
-  fill: #f25234;
-}
-
 /* my works */
 
 .my-works {
   width: 80%;
+  height: 100%;
   margin: auto;
   display: flex;
   text-align: center;
@@ -422,17 +536,7 @@ button > span {
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
-.blog > h3 {
-  width: 80%;
-  margin: 0;
-  margin-left: 1.5em;
-  line-height: 4;
-  border-bottom: 1px solid var(--background-symbol);
-  text-align: center;
-  font-size: 1rem;
-}
-
-.blog {
+ul li > .blog {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -442,14 +546,21 @@ button > span {
   height: 100%;
   padding: 0 2em;
   margin: 1em 0;
-  background: url(/image/my-work-img.png);
+  background: url(image/my-work-img.png);
   background-color: rgba(10, 10, 10, 1);
   background-blend-mode: overlay;
   background-size: cover;
 }
 
-.blog > button {
-  width: 80%;
+.blog:hover {
+  background-color: rgba(10, 10, 10, 0);
+  color: var(--background-symbol);
+  transition: all 0.8s;
+}
+
+.blog a > button {
+  width: 100%;
+  height: 50px;
   margin-bottom: 50px;
   display: flex;
   align-items: center;
@@ -459,9 +570,33 @@ button > span {
   border-radius: 8px;
   background-color: var(--background-button);
   cursor: pointer;
+  animation-fill-mode: forwards;
 }
 
-.blog button > span {
+.blog a > button:not(:active) {
+  animation-name: reverse-animation;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reverse-animation {
+  0% {
+    transform: scale(0.5);
+    background-color: var(--background-button-hover);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: var(--background-button-hover);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: var(--background-button);
+  }
+}
+
+.blog a button > span {
   font-size: 0.7rem;
 }
 
@@ -491,25 +626,30 @@ button > span {
   display: flex;
   flex-direction: column;
   color: var(--background-symbol);
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  text-align: center;
+  text-align: start;
   padding: 0 2em;
   margin: 2em 0;
 }
 
+.contact-b a > h3 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.contact-b a h3 > span {
+  margin-left: 1.6em;
+}
+
 .contact-all {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   padding: 0;
-}
-
-.contact-all a h3 > i {
-  margin-right: 1.5em;
-  color: var(--font-color);
-  font-size: 1.5rem;
 }
 
 input {
@@ -582,15 +722,22 @@ label {
 }
 
 .form-button {
-  border: none;
-  border-bottom: 3px solid var(--background-symbol);
-  color: var(--font-color);
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  color: var(--background-symbol);
   margin-bottom: 2.9em;
   background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
   cursor: pointer;
 }
 
-@media (min-width: 480px) {
+.contact-form > .form-button:active {
+  animation-name: reverse-animation;
+  transition: 0.4s;
+  animation-duration: 3s;
+}
+
+@media (min-width: 500px) {
   header {
     width: 100%;
     flex-direction: column;
@@ -740,6 +887,25 @@ label {
     margin: 0;
   }
 
+  .skill-logo:hover {
+    transition: all 0.5s;
+    animation-name: skill;
+  }
+
+  @keyframes skill {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.5);
+    }
+
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
   .skill-logo > span {
     font-size: 2rem;
     margin: 0.8em 0 0.8em 0;
@@ -787,8 +953,8 @@ label {
     align-items: center;
   }
 
-  .blog {
-    width: 50%;
+  div.blog {
+    width: 60%;
     margin: 1em;
   }
 
@@ -809,10 +975,6 @@ label {
     align-items: center;
     width: 100%;
     line-height: 1rem;
-  }
-
-  #contact > h2 {
-    margin-right: 3em;
   }
 
   .contact-all {
@@ -839,11 +1001,6 @@ label {
 
   .contact-a h3 {
     flex-direction: row;
-  }
-
-  .contact-a h3 > div {
-    display: flex;
-    flex-direction: column;
   }
 
   .contact-form {
@@ -911,6 +1068,15 @@ label {
     width: 50%;
   }
 
+  .my-works > ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 80%;
+  }
+
   .navbar nav .hamburger-menu > ul {
     width: 100%;
     justify-content: space-around;
@@ -961,24 +1127,52 @@ label {
     height: 100px;
   }
 
-  .blog > p {
-    font-size: 1.2rem;
-  }
-
   .author > p {
     padding: 0;
+  }
+
+  ul .blog > p {
+    font-size: 1.2rem;
   }
 
   #about-me > p {
     width: 70%;
   }
 
+  .skill-logo:hover {
+    animation-name: skills;
+    animation-duration: 0.8s;
+  }
+
+  @keyframes skills {
+    0% {
+      top: 0;
+    }
+
+    50% {
+      transform: scale(1.5);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
   .my-works {
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    width: 100%;
+    background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
+    padding: 0;
+    margin-bottom: 2em;
+  }
+
+  .my-works > ul > li {
+    width: 80%;
+    height: 80%;
+    margin: 1em;
+    padding: 0;
   }
 
   .blog {
@@ -987,19 +1181,40 @@ label {
     position: relative;
     bottom: 7px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    transition: 0.5s;
   }
 
-  .blog > h2 {
+  ul .blog:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    animation-name: bloghover;
+  }
+
+  @keyframes bloghover {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  ul .blog > h2 {
     font-size: 1.5rem;
   }
 
-  .blog > h3 {
+  ul .blog > h3 {
     font-size: 1.2rem;
   }
 
-  .blog > button {
-    font-size: 1rem;
+  ul .blog a > button {
+    font-size: 1.5rem;
     height: 6vh;
   }
 
@@ -1014,7 +1229,7 @@ label {
   }
 
   .footer-contacts {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1034,8 +1249,9 @@ label {
   #contact > h2 {
     text-align: center;
     font-size: 2rem;
-    margin-right: 5em;
-    margin-bottom: 2em;
+    position: relative;
+    right: 2em;
+    bottom: 0.5em;
   }
 
   .author {
