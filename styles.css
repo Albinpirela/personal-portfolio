@@ -125,8 +125,86 @@ h2 > span {
   font-size: 1.5rem;
 }
 
+.contact-all a h3 > .liked {
+  fill: #fff;
+  mix-blend-mode: normal;
+}
+
+.skill-logo > .html:hover path {
+  fill: #fc490b;
+  transition: 0.4s;
+}
+
+.skill-logo > .css:hover path {
+  fill: #2196f4;
+  transition: 0.4s;
+}
+
+.skill-logo > .js:hover path {
+  fill: #ffdf00;
+  transition: 0.4s;
+}
+
+.skill-logo > .sass:hover path {
+  fill: #ca669b;
+  transition: 0.4s;
+}
+
+.skill-logo > .git:hover path {
+  fill: #f25234;
+  transition: 0.4s;
+}
+
+.contact-all a h3 > .liked:hover path {
+  fill: #ff8303;
+  transition: 1s;
+}
+
 .contact-a ul li a h3 > i:hover {
   color: var(--background-symbol);
+  transition: 1s;
+}
+
+.blog > h3 {
+  width: 80%;
+  margin: 0;
+  margin-left: 1.5em;
+  line-height: 4;
+  border-bottom: 1px solid var(--background-symbol);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.contact-a a > h3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+button > span {
+  position: relative;
+  bottom: 1px;
+}
+
+.skill-logo > span {
+  margin-left: 0.7em;
+  color: var(--font-color);
+  font-size: 1.8rem;
+  font-family: 'Inconsolata', 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+
+.contact-a a h3 > span {
+  margin-left: 1.6em;
+  font-size: 1rem;
+}
+
+.contact-a a h3 > .discord {
+  fill: #fff;
+}
+
+.contact-a a h3 > .discord:hover path {
+  fill: #ff8303;
   transition: 1s;
 }
 
@@ -433,44 +511,6 @@ svg > g {
   mix-blend-mode: normal;
 }
 
-button > span {
-  position: relative;
-  bottom: 1px;
-}
-
-.skill-logo > span {
-  margin-left: 0.7em;
-  color: var(--font-color);
-  font-size: 1.8rem;
-  font-family: 'Inconsolata', 'Times New Roman', Times, serif;
-  font-weight: 500;
-}
-
-.skill-logo > .html:hover path {
-  fill: #fc490b;
-  transition: 0.4s;
-}
-
-.skill-logo > .css:hover path {
-  fill: #2196f4;
-  transition: 0.4s;
-}
-
-.skill-logo > .js:hover path {
-  fill: #ffdf00;
-  transition: 0.4s;
-}
-
-.skill-logo > .sass:hover path {
-  fill: #ca669b;
-  transition: 0.4s;
-}
-
-.skill-logo > .git:hover path {
-  fill: #f25234;
-  transition: 0.4s;
-}
-
 /* my works */
 
 .my-works {
@@ -483,16 +523,6 @@ button > span {
   justify-content: center;
   font-weight: 500;
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
-}
-
-.blog > h3 {
-  width: 80%;
-  margin: 0;
-  margin-left: 1.5em;
-  line-height: 4;
-  border-bottom: 1px solid var(--background-symbol);
-  text-align: center;
-  font-size: 1rem;
 }
 
 ul li > .blog {
@@ -533,12 +563,12 @@ ul li > .blog {
 }
 
 .blog a > button:not(:active) {
-  animation-name: animacion-inversa;
+  animation-name: reverse-animation;
   animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
-@keyframes animacion-inversa {
+@keyframes reverse-animation {
   0% {
     transform: scale(0.5);
     background-color: var(--background-button-hover);
@@ -590,6 +620,16 @@ ul li > .blog {
   text-align: center;
   padding: 0 2em;
   margin: 2em 0;
+}
+
+.contact-b a > h3 {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.contact-b a h3 > span {
+  margin-left: 1.6em;
 }
 
 .contact-all {
@@ -952,11 +992,6 @@ label {
 
   .contact-a h3 {
     flex-direction: row;
-  }
-
-  .contact-a h3 > div {
-    display: flex;
-    flex-direction: column;
   }
 
   .contact-form {
