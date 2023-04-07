@@ -79,6 +79,14 @@ footer > h2 {
   font-size: 1.5rem;
 }
 
+.headline-a > a {
+  text-decoration: none;
+  color: var(--font-color);
+  border: 1px solid var(--background-symbol);
+  border-radius: 10px;
+  padding: 0.5em;
+}
+
 .author > h2 {
   color: var(--background-symbol);
   text-align: center;
@@ -686,7 +694,8 @@ textarea:focus {
   border-bottom: 2px solid var(--background-symbol);
 }
 
-input:-webkit-autofill, /*so that the automatic selection of the input has styles*/
+input:-webkit-autofill,
+/*so that the automatic selection of the input has styles*/
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
