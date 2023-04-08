@@ -762,7 +762,7 @@ label {
     position: fixed;
   }
 
-  nav{
+  nav {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -998,7 +998,6 @@ label {
   }
 
   #contact {
-    width: 95%;
     margin: 0;
     flex-direction: column;
     flex-wrap: wrap;
