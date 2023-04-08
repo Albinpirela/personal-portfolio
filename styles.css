@@ -660,6 +660,7 @@ ul li > .blog {
   justify-content: start;
   align-items: start;
   padding: 0;
+  box-sizing: border-box;
 }
 
 input {
@@ -979,7 +980,7 @@ label {
   }
 
   #contact {
-    margin: 2em 0;
+    margin: 0;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -991,7 +992,7 @@ label {
   .contact-all {
     width: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
   }
@@ -1249,19 +1250,17 @@ label {
 
   #contact {
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     padding: 0;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     position: relative;
     left: 10em;
   }
 
   #contact > h2 {
-    text-align: center;
+    margin: 0 0 0.5em 0;
     font-size: 2rem;
-    position: relative;
-    right: 2em;
     bottom: 0.5em;
   }
 
@@ -1275,8 +1274,8 @@ label {
   .contact-all {
     width: 100%;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
   }
 
   .contact-a {
