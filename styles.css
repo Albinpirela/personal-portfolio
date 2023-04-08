@@ -317,6 +317,7 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 500;
+  margin-right: 0.6em;
 }
 
 /* For the java scripts */
@@ -326,7 +327,7 @@ nav {
 }
 
 .container {
-  width: 100%;
+  width: 98%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -660,7 +661,6 @@ ul li > .blog {
   justify-content: start;
   align-items: start;
   padding: 0;
-  box-sizing: border-box;
 }
 
 input {
@@ -756,6 +756,16 @@ label {
     justify-content: center;
     align-items: center;
     position: fixed;
+  }
+
+  nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    box-sizing: border-box;
   }
 
   .logo {
@@ -1259,7 +1269,6 @@ label {
   }
 
   #contact > h2 {
-    margin: 0 0 0.5em 0;
     font-size: 2rem;
     bottom: 0.5em;
   }
