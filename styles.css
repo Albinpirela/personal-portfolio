@@ -33,11 +33,11 @@ img {
 
 header {
   margin: 0;
-  padding: 0;
+  padding: 0 1.5em 0 0;
   position: fixed;
   top: 0;
   background-color: var(--background-container);
-  z-index: 500;
+  z-index: 1500;
   display: flex;
   width: 100vw;
   justify-content: space-between;
@@ -45,6 +45,8 @@ header {
 }
 
 .logo {
+  margin: 0;
+  padding: 0;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -70,7 +72,6 @@ footer > h2 {
   align-items: center;
   color: var(--background-symbol);
   margin: 0;
-  margin-left: 0.5em;
 }
 
 .headline-a > h2 {
@@ -252,16 +253,13 @@ button > span {
 }
 
 nav {
-  width: 80%;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: row-reverse;
 }
 
 .hamburger-menu {
-  width: 100vw;
-  height: 90vh;
+  width: 50%;
   position: absolute;
   left: 0;
   top: 0;
@@ -270,6 +268,8 @@ nav {
   align-items: center;
   background-color: rgba(27, 26, 23, 0.9);
   transition: all 0.5s ease;
+  margin: 0;
+  padding: 0;
 }
 
 /* dropdown menu */
@@ -280,6 +280,8 @@ nav {
   font-size: 2.5rem;
   line-height: 2;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 .hamburger-menu ul > li {
@@ -291,6 +293,8 @@ nav {
 .hamburger-menu ul li > a {
   color: var(--font-color);
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 .hamburger-menu ul li > a:hover {
@@ -306,7 +310,6 @@ nav {
 }
 
 .hamburger-ico {
-  vertical-align: top;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,7 +317,6 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 500;
-  margin-right: 0.5em;
 }
 
 /* For the java scripts */
