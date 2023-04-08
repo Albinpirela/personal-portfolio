@@ -1,5 +1,9 @@
 html,
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   font-family: 'inconsolata', 'Times New Roman', Times, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -33,11 +37,11 @@ img {
 
 header {
   margin: 0;
-  padding: 0;
+  padding: 0 1.5em 0 0;
   position: fixed;
   top: 0;
   background-color: var(--background-container);
-  z-index: 500;
+  z-index: 1500;
   display: flex;
   width: 100vw;
   justify-content: space-between;
@@ -45,6 +49,8 @@ header {
 }
 
 .logo {
+  margin: 0;
+  padding: 0;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -70,13 +76,43 @@ footer > h2 {
   align-items: center;
   color: var(--background-symbol);
   margin: 0;
-  margin-left: 0.5em;
 }
 
 .headline-a > h2 {
   margin: 0;
   color: var(--font-color);
   font-size: 1.5rem;
+}
+
+.headline-a > a {
+  text-decoration: none;
+  color: var(--font-color);
+  border: 1px solid var(--background-symbol);
+  border-radius: 10px;
+  padding: 0.5em;
+  animation: border-rotate 4s linear infinite;
+}
+
+@keyframes border-rotate {
+  0% {
+    border-color: var(--background-symbol);
+  }
+
+  25% {
+    border-color: #ffdf00;
+  }
+
+  50% {
+    border-color: #f00;
+  }
+
+  75% {
+    border-color: var(--background-symbol);
+  }
+
+  100% {
+    border-color: #f00;
+  }
 }
 
 .author > h2 {
@@ -244,16 +280,13 @@ button > span {
 }
 
 nav {
-  width: 80%;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: row-reverse;
 }
 
 .hamburger-menu {
-  width: 100vw;
-  height: 90vh;
+  width: 50%;
   position: absolute;
   left: 0;
   top: 0;
@@ -262,6 +295,8 @@ nav {
   align-items: center;
   background-color: rgba(27, 26, 23, 0.9);
   transition: all 0.5s ease;
+  margin: 0;
+  padding: 0;
 }
 
 /* dropdown menu */
@@ -272,6 +307,8 @@ nav {
   font-size: 2.5rem;
   line-height: 2;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 .hamburger-menu ul > li {
@@ -283,6 +320,8 @@ nav {
 .hamburger-menu ul li > a {
   color: var(--font-color);
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 .hamburger-menu ul li > a:hover {
@@ -298,7 +337,6 @@ nav {
 }
 
 .hamburger-ico {
-  vertical-align: top;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,7 +344,7 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 500;
-  margin-right: 0.5em;
+  margin-right: 0.7em;
 }
 
 /* For the java scripts */
@@ -316,7 +354,7 @@ nav {
 }
 
 .container {
-  width: 100%;
+  width: 98%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -516,6 +554,28 @@ ul .blog > p {
   width: 90%;
   background: var(--background-button);
   border-radius: 10px;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.skill-logo:hover,
+.skill-logo:active {
+  animation-name: skill-logo-animation;
+}
+
+@keyframes skill-logo-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 svg > g {
@@ -686,7 +746,8 @@ textarea:focus {
   border-bottom: 2px solid var(--background-symbol);
 }
 
-input:-webkit-autofill, /*so that the automatic selection of the input has styles*/
+input:-webkit-autofill,
+/*so that the automatic selection of the input has styles*/
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
@@ -744,6 +805,20 @@ label {
     justify-content: center;
     align-items: center;
     position: fixed;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 100%;
   }
 
   .logo {
@@ -885,24 +960,27 @@ label {
     height: 300px;
     padding: 0;
     margin: 0;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
 
-  .skill-logo:hover {
-    transition: all 0.5s;
-    animation-name: skill;
+  .skill-logo:hover,
+  .skill-logo:active {
+    animation-name: skill-logo-animation-table;
   }
 
-  @keyframes skill {
+  @keyframes skill-logo-animation-table {
     0% {
       transform: scale(1);
     }
 
     50% {
-      transform: scale(1.5);
+      transform: scale(1.3);
     }
 
     100% {
-      transform: scale(1.2);
+      transform: scale(1);
     }
   }
 
@@ -968,27 +1046,27 @@ label {
   }
 
   #contact {
-    margin: 2em 0;
+    margin: 0;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     line-height: 1rem;
+    padding: 0;
   }
 
   .contact-all {
-    width: 100%;
+    width: 70%;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 0;
+    justify-content: center;
     padding: 0;
   }
 
   .contact-a {
     padding: 0;
     box-sizing: border-box;
-    width: 50%;
+    width: 40%;
     margin: 0 2em;
   }
 
@@ -1238,19 +1316,16 @@ label {
 
   #contact {
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     padding: 0;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     position: relative;
     left: 10em;
   }
 
   #contact > h2 {
-    text-align: center;
     font-size: 2rem;
-    position: relative;
-    right: 2em;
     bottom: 0.5em;
   }
 
@@ -1264,8 +1339,8 @@ label {
   .contact-all {
     width: 100%;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
   }
 
   .contact-a {
