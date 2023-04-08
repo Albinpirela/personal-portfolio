@@ -90,6 +90,29 @@ footer > h2 {
   border: 1px solid var(--background-symbol);
   border-radius: 10px;
   padding: 0.5em;
+  animation: border-rotate 4s linear infinite;
+}
+
+@keyframes border-rotate {
+  0% {
+    border-color: var(--background-symbol);
+  }
+
+  25% {
+    border-color: #ffdf00;
+  }
+
+  50% {
+    border-color: #f00;
+  }
+
+  75% {
+    border-color: var(--background-symbol);
+  }
+
+  100% {
+    border-color: #f00;
+  }
 }
 
 .author > h2 {
@@ -531,6 +554,28 @@ ul .blog > p {
   width: 90%;
   background: var(--background-button);
   border-radius: 10px;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.skill-logo:hover,
+.skill-logo:active {
+  animation-name: skill-logo-animation;
+}
+
+@keyframes skill-logo-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 svg > g {
@@ -915,24 +960,27 @@ label {
     height: 300px;
     padding: 0;
     margin: 0;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
 
-  .skill-logo:hover {
-    transition: all 0.5s;
-    animation-name: skill;
+  .skill-logo:hover,
+  .skill-logo:active {
+    animation-name: skill-logo-animation-table;
   }
 
-  @keyframes skill {
+  @keyframes skill-logo-animation-table {
     0% {
       transform: scale(1);
     }
 
     50% {
-      transform: scale(1.5);
+      transform: scale(1.3);
     }
 
     100% {
-      transform: scale(1.2);
+      transform: scale(1);
     }
   }
 
