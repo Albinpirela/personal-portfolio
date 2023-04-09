@@ -1090,7 +1090,7 @@ label {
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1200px) {
   .container {
     margin: 0;
     padding: 0;
