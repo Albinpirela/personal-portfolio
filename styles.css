@@ -378,7 +378,6 @@ nav {
 .headline {
   width: 100%;
   box-sizing: border-box;
-  padding-left: 1em;
   margin-top: 7em;
   display: flex;
   flex-direction: column;
@@ -399,7 +398,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 95%;
+  width: 98%;
   margin: 0;
   background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
