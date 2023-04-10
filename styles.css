@@ -393,7 +393,7 @@ nav {
   font-size: 1rem;
   box-sizing: border-box;
   position: absolute;
-  top: 20em;
+  top: 35em;
   padding: 2em 2.8em 2em;
   display: flex;
   justify-content: center;
@@ -433,6 +433,8 @@ nav {
 
 .headline-a {
   display: flex;
+  margin: 2em 0;
+  padding: 3em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
