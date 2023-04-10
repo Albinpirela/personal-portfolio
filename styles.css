@@ -562,15 +562,15 @@ ul .blog > p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0.5em 0;
   padding: 0;
   list-style: none;
   width: 100%;
 }
 
 .skill-logo {
-  height: 7vh;
-  margin: 0.5em 0;
+  height: 10vh;
+  margin:0;
   padding: 0 0.5em;
   display: flex;
   justify-content: flex-start;
