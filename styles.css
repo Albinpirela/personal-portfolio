@@ -1,15 +1,10 @@
 html,
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   padding: 0;
   font-family: 'inconsolata', 'Times New Roman', Times, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: var(--font-color);
   background-color: var(--background-container);
-  width: 100%;
   scroll-padding-top: 4em;
   scroll-margin-top: 4em;
   scroll-behavior: smooth;
@@ -44,7 +39,7 @@ header {
   background-color: var(--background-container);
   z-index: 1500;
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
@@ -155,6 +150,13 @@ h2 > span {
   color: var(--background-symbol);
   display: flex;
   flex-direction: row;
+}
+
+.hamburger-ico > i {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  right: 0.5em;
 }
 
 .contact-all a h3 > i {
@@ -346,7 +348,8 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 500;
-  margin-right: 0.7em;
+  margin: 0;
+  padding: 0;
 }
 
 /* For the java scripts */
@@ -356,7 +359,8 @@ nav {
 }
 
 .container {
-  width: 98%;
+  position: relative;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -389,12 +393,12 @@ nav {
   box-sizing: border-box;
   position: absolute;
   top: 20em;
-  padding: 1em 2.8em 2em;
+  padding: 2em 2.8em 2em;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  margin: 2em 0;
+  width: 95%;
+  margin: 0;
   background-image: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
@@ -413,6 +417,8 @@ nav {
 }
 
 .headline-img > p {
+  display: flex;
+  align-items: center;
   color: rgba(255, 129, 3, 0.327);
   line-height: 1.8;
   text-align: start;
@@ -443,6 +449,17 @@ nav {
   padding: 0.5em 1.5em 0 1.5em;
   font-size: 1.3rem;
   font-family: 'Inconsolata', 'Times New Roman', Times, serif;
+}
+
+.about {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* about me */
@@ -491,6 +508,7 @@ ul .blog > p {
 #skills {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin: 5em 0 6.25em 0;
   padding: 0 1em;
@@ -530,16 +548,19 @@ ul .blog > p {
 #skills ul {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-direction: column;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 98%;
   box-sizing: border-box;
 }
 
 #skills ul > li {
-  margin: 0 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   padding: 0;
   list-style: none;
   width: 100%;
@@ -548,14 +569,15 @@ ul .blog > p {
 .skill-logo {
   height: 7vh;
   margin: 0.5em 0;
-  padding-left: 1em;
+  padding: 0 0.5em;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   fill: #000;
-  width: 90%;
+  width: 95%;
   background: var(--background-button);
   border-radius: 10px;
+  box-sizing: border-box;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -664,8 +686,20 @@ ul li > .blog {
 
 /* footer */
 
-.contact-form {
+footer {
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
+}
+
+.contact-form {
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -692,7 +726,7 @@ ul li > .blog {
   align-items: center;
   text-align: start;
   padding: 0 2em;
-  margin: 2em 0;
+  margin: 0;
 }
 
 .contact-b a > h3 {
@@ -1059,7 +1093,7 @@ label {
   }
 
   .contact-all {
-    width: 70%;
+    width: 60%;
     flex-direction: row;
     justify-content: center;
     padding: 0;
@@ -1188,7 +1222,7 @@ label {
     box-sizing: border-box;
     flex-direction: column;
     margin: 0;
-    padding: 0;
+    padding: 2em 0;
   }
 
   #about-me {
