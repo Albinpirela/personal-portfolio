@@ -58,6 +58,8 @@ header {
   margin: 2em 0 0 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer > h2 {
@@ -536,8 +538,8 @@ ul .blog > p {
 }
 
 .my-works > ul {
-  width: 95%;
-  margin: auto;
+  width: 90%;
+  margin: 0;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -1063,7 +1065,6 @@ label {
   .my-works {
     display: flex;
     justify-content: center;
-    padding: 5em;
     align-items: center;
   }
 
