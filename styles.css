@@ -20,10 +20,6 @@ body {
   --background-button-hover: #49463c;
 }
 
-/* * {
-  text-shadow: 2px 1px 1px rgba(212, 200, 178, 0.2);
-} */
-
 img {
   position: relative;
   top: 10px;
@@ -125,8 +121,7 @@ footer > h2 {
 
 ul .blog > h2 {
   color: var(--heading-color);
-  margin: 0;
-  margin-top: 2em;
+  margin: 1.5em 0 0;
   font-size: 2rem;
   z-index: 1000;
 }
@@ -142,7 +137,7 @@ h2 > span {
   color: var(--font-color);
 }
 
-.blog > a {
+.seeblog > a {
   width: 60%;
   text-decoration: none;
 }
@@ -292,7 +287,7 @@ nav {
 }
 
 .hamburger-menu {
-  width: 50%;
+  width: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -310,8 +305,9 @@ nav {
 .hamburger-menu > ul {
   color: var(--font-color);
   list-style: none;
-  font-size: 2.5rem;
-  line-height: 2;
+  font-size: 1.5rem;
+  line-height: 3;
+  outline: none;
   cursor: pointer;
   margin: 0;
   padding: 0;
@@ -358,6 +354,15 @@ nav {
 
 .active {
   transform: translate(0, -100%);
+  transition: all 0.5s ease;
+}
+
+.active ul{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.opacity{
+  transform: translate(0, 3);
 }
 
 .container {
@@ -394,7 +399,7 @@ nav {
   box-sizing: border-box;
   position: absolute;
   top: 35em;
-  padding: 2em 2.8em 2em;
+  padding: 2em 1em 2em;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -424,11 +429,11 @@ nav {
   line-height: 1.8;
   text-align: start;
   justify-content: center;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   margin: auto;
   width: 100%;
   height: 60%;
-  padding: 0.5em 1.5em 0 1em;
+  padding: 0;
 }
 
 .headline-a {
@@ -489,6 +494,7 @@ nav {
 }
 
 ul .blog > p {
+  margin-bottom: 4em;
   font-family: 'Inconsolata', 'Courier New', Courier, monospace;
   font-style: normal;
   font-weight: 500;
@@ -536,6 +542,10 @@ ul .blog > p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url(image/my-work-img.png);
+  background-color: rgba(10, 10, 10, 1);
+  background-blend-mode: overlay;
+  background-size: cover;
 }
 
 .my-works > ul {
@@ -623,6 +633,10 @@ svg > g {
   background: radial-gradient(100% 100% at 50% 100%, var(--background-box) 21.52%, var(--background-container) 100%);
 }
 
+.my-works ul > li {
+  position: relative;
+}
+
 ul li > .blog {
   display: flex;
   justify-content: center;
@@ -633,22 +647,16 @@ ul li > .blog {
   height: 100%;
   padding: 0 2em;
   margin: 1em 0;
-  background: url(image/my-work-img.png);
-  background-color: rgba(10, 10, 10, 1);
-  background-blend-mode: overlay;
-  background-size: cover;
 }
 
-.blog:hover {
-  background-color: rgba(10, 10, 10, 0);
-  color: var(--background-symbol);
-  transition: all 0.8s;
+.seeblog{
+  position: absolute;
+  bottom: 2em;
 }
 
-.blog a > button {
+.seeblog a > button {
   width: 100%;
   height: 50px;
-  margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -684,7 +692,7 @@ ul li > .blog {
 }
 
 .blog a button > span {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 /* footer */
@@ -877,6 +885,11 @@ label {
 
   .active {
     transform: translate(0, 0);
+    transition: 2s;
+  }
+
+  .active > ul {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);  
   }
 
   .hamburger-menu {
@@ -890,8 +903,13 @@ label {
     transition: all 0s;
   }
 
+  .hamburger-menu a:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
   .hamburger-menu > ul {
-    width: 100%;
+    width: 100%; 
+    line-height: 1;
     display: flex;
     justify-content: space-around;
     font-size: 1.2rem;
