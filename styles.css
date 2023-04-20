@@ -356,12 +356,8 @@ nav {
   transition: all 0.5s ease;
 }
 
-.active ul{
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.opacity{
-  transform: translate(0, 3);
+.active ul {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .container {
@@ -502,7 +498,30 @@ ul .blog > p {
   text-align: start;
 }
 
-ul .blog:hover{
+.my-works ul li > img {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul li > .blog {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 2em;
+  margin: 0;
+  background-color: rgba(27, 26, 23, 0.8);
+}
+
+ul .blog:hover {
   opacity: 0;
   cursor: pointer;
   transition: 1s;
@@ -540,7 +559,8 @@ ul .blog:hover{
 
 .my-works ul > li {
   list-style: none;
-  margin: auto;
+  position: relative;
+  margin: 1em;
   padding: 0;
   width: 100%;
   max-width: 400px;
@@ -638,40 +658,7 @@ svg > g {
   font-weight: 500;
 }
 
-
-
-.my-works ul > li {
-  position: relative;
-  margin: 1em;
-  padding: 0;
-  width: 100%;
-  max-width: 400px;
-}
-
-.my-works ul li > img{
-  position: relative;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-ul li > .blog {
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  box-sizing: border-box;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 0 2em;
-  margin: 0;
-  background-color: rgba(27, 26, 23, 0.8);
-}
-
-.seeblog{
+.seeblog {
   position: absolute;
   bottom: 1.5em;
 }
@@ -911,7 +898,7 @@ label {
   }
 
   .active > ul {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);  
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .hamburger-menu {
@@ -926,11 +913,11 @@ label {
   }
 
   .hamburger-menu a:active {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .hamburger-menu > ul {
-    width: 100%; 
+    width: 100%;
     line-height: 1;
     display: flex;
     justify-content: space-around;
