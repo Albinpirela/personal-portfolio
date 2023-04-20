@@ -417,7 +417,7 @@ nav {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: auto;
+  width: 344px;
   height: auto;
 }
 
@@ -673,7 +673,7 @@ ul li > .blog {
 
 .seeblog{
   position: absolute;
-  bottom: 1em;
+  bottom: 1.5em;
 }
 
 .seeblog a > button {
