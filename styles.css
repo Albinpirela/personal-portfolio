@@ -517,7 +517,7 @@ ul li > .blog {
   height: 100%;
   padding: 0 2em;
   margin: 0;
-  background-color: rgba(27, 26, 23, 0.8);
+  background-color: rgba(27, 26, 23, 0.95);
 }
 
 ul .blog:hover {
@@ -675,7 +675,7 @@ svg > g {
   animation-fill-mode: forwards;
 }
 
-.blog a > button:not(:active) {
+.seeblog a > button:not(:hover) {
   animation-name: reverse-animation;
   animation-duration: 3s;
   animation-fill-mode: forwards;
