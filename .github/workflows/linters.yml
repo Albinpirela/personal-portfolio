@@ -46,8 +46,8 @@ jobs:
           [ -f .stylelintrc.json ]
       - name: Stylelint Report
         run: npx stylelint "**/*.{css,scss}"
-        ESLint:
-    name: ESLint
+        eslint:
+    name: eslint
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
