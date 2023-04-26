@@ -293,10 +293,11 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(27, 26, 23, 0.9);
+  background-color: #000;
   transition: all 0.5s ease;
   margin: 0;
   padding: 0;
+  z-index: 500;
 }
 
 /* dropdown menu */
@@ -344,7 +345,6 @@ nav {
   color: var(--font-color);
   font-size: 1.5rem;
   cursor: pointer;
-  z-index: 500;
   margin: 0;
   padding: 0;
 }
