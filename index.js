@@ -12,7 +12,7 @@ closeMenu.innerHTML = 'X';
 menu.appendChild(closeMenu);
 closeMenu.classList.add('close-menu');
 closeMenu.style.position = 'absolute';
-closeMenu.style.top = '10px';
+closeMenu.style.top = '5px';
 closeMenu.style.right = '40px';
 closeMenu.style.fontSize = '2rem';
 closeMenu.style.fontWeight = 'bold';
