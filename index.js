@@ -11,11 +11,11 @@ function hiddenMenu() {
 }
 
 function toggleMenu(e) {
-// Cambia los estilos para el menú y el body
+// Change the styles for the menu and the body
   menu.classList.toggle('active');
   document.body.classList.toggle('opacity');
 
-  // Cambia el atributo "src" del icono del menú
+  // Change the "src" attribute of the menu icon
   const currentIcon = e.target.querySelector('svg');
   if (currentIcon.classList.contains('fa-solid')) {
     currentIcon.setAttribute('class', 'fa-sharp');
