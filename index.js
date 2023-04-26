@@ -10,7 +10,7 @@ const closeMenu = document.createElement('span');
 
 closeMenu.innerHTML = 'X';
 menu.appendChild(closeMenu);
-closeMenu.classList.add('clouse-menu');
+closeMenu.classList.add('close-menu');
 closeMenu.style.position = 'absolute';
 closeMenu.style.top = '10px';
 closeMenu.style.right = '40px';

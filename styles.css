@@ -1201,6 +1201,11 @@ label {
 
   .hamburger-menu {
     width: 100%;
+    background-color: rgba(31, 30, 27, 0.8);
+  }
+
+  .close-menu {
+    display: none;
   }
 
   nav {
