@@ -14,11 +14,9 @@ closeMenu.classList.add('close-menu');
 closeMenu.style.position = 'absolute';
 closeMenu.style.top = '10px';
 closeMenu.style.right = '40px';
-closeMenu.style.fontSize = '1.5rem';
+closeMenu.style.fontSize = '2rem';
+closeMenu.style.fontWeight = 'bold';
 closeMenu.style.cursor = 'pointer';
-closeMenu.style.padding = '5px';
-closeMenu.style.border = '1px solid #ff8303';
-closeMenu.style.borderRadius = '50%';
 
 function hiddenMenu() {
   menu.classList.add('active');

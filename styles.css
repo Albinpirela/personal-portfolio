@@ -302,6 +302,21 @@ nav {
 
 /* dropdown menu */
 
+.active ul {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.my-works > ul {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
 .hamburger-menu > ul {
   color: var(--font-color);
   list-style: none;
@@ -311,6 +326,10 @@ nav {
   cursor: pointer;
   margin: 0;
   padding: 0;
+}
+
+.hamburger-menu > ul:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .hamburger-menu ul > li {
@@ -324,6 +343,7 @@ nav {
   text-decoration: none;
   margin: 0;
   padding: 0;
+  font-size: 2rem;
 }
 
 .hamburger-menu ul li > a:hover {
@@ -349,15 +369,15 @@ nav {
   padding: 0;
 }
 
+.hamburger-ico:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 /* For the java scripts */
 
 .active {
   transform: translate(0, -100%);
   transition: all 0.5s ease;
-}
-
-.active ul {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .container {
@@ -569,17 +589,6 @@ ul .blog:hover {
   background-color: rgba(10, 10, 10, 1);
   background-blend-mode: overlay;
   background-size: cover;
-}
-
-.my-works > ul {
-  width: 100%;
-  margin: 0;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
 }
 
 #skills ul {
