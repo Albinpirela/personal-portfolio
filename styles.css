@@ -124,6 +124,14 @@ footer > h2 {
   font-size: 2.5rem;
 }
 
+.modal-legend > h2 {
+  color: var(--background-symbol);
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+
 ul .blog > h2 {
   color: var(--heading-color);
   margin: 0;
@@ -145,6 +153,89 @@ h2 > span {
 .seeblog > a {
   width: 60%;
   text-decoration: none;
+}
+
+.modal {
+  padding: 0;
+  display: none;
+  position: fixed;
+  z-index: 1500;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  background-color: var(--background-container);
+  border: 1px solid var(--background-symbol);
+  border-radius: 10px;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Button style */
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  border: none;
+  color: var(--font-color);
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+.modal-content > .img-modal {
+  width: 80%;
+  max-width: 250px;
+  height: 40%;
+}
+
+.modal-content > .modal-legend {
+  width: 80%;
+  max-width: 250px;
+  height: 40%;
+}
+
+.modal-legend > h3 {
+  color: var(--font-color);
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  border-bottom: 2px solid var(--background-symbol);
+}
+
+.modal-legend > p {
+  color: var(--font-color);
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+.img-modal > img {
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  max-height: 250px;
+  object-fit: cover;
 }
 
 .contact-a ul li > a {
@@ -320,6 +411,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 0;
+  position: relative;
 }
 
 .hamburger-menu > ul {
@@ -528,27 +620,20 @@ ul .blog > p {
   text-align: start;
 }
 
-.my-works ul li > img {
-  position: relative;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 ul li > .blog {
   position: absolute;
   top: 0;
+  z-index: 1;
   display: flex;
   justify-content: center;
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
   width: 100%;
-  height: 100%;
-  padding: 0 2em;
-  margin: 0;
+  height: 105%;
   background-color: rgba(27, 26, 23, 0.95);
+  margin: 0;
+  padding: 3em;
 }
 
 ul .blog:hover {
@@ -589,17 +674,23 @@ ul .blog:hover {
 .my-works ul > li {
   list-style: none;
   position: relative;
-  margin: 1em;
   padding: 0;
   width: 100%;
   max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(image/my-work-img.png);
-  background-color: rgba(10, 10, 10, 1);
-  background-blend-mode: overlay;
-  background-size: cover;
+  margin: 0;
+}
+
+.my-works ul li > .imgBlog {
+  width: 100%;
+  height: 90%;
+}
+
+.imgBlog > img {
+  width: 90%;
+  height: 90%;
 }
 
 #skills ul {
@@ -679,6 +770,7 @@ svg > g {
 .seeblog {
   position: absolute;
   bottom: 1.5em;
+  z-index: 500;
 }
 
 .seeblog a > button {
@@ -693,29 +785,6 @@ svg > g {
   background-color: var(--background-button);
   cursor: pointer;
   animation-fill-mode: forwards;
-}
-
-.seeblog a > button:not(:hover) {
-  animation-name: reverse-animation;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes reverse-animation {
-  0% {
-    transform: scale(0.5);
-    background-color: var(--background-button-hover);
-  }
-
-  50% {
-    transform: scale(1.2);
-    background-color: var(--background-button-hover);
-  }
-
-  100% {
-    transform: scale(1);
-    background-color: var(--background-button);
-  }
 }
 
 .blog a button > span {
@@ -1125,6 +1194,43 @@ label {
     margin: 1em;
   }
 
+  .modal {
+    width: 90%;
+    max-width: 700px;
+    height: 80%;
+    max-height: 400px;
+    max-height: 350px;
+    justify-content: space-around;
+    align-items: center;
+    top: 50px;
+  }
+
+  .modal > .modal-content {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal-content > .img-modal {
+    width: 50%;
+    max-width: 250px;
+    height: 70%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal-content > .modal-legend {
+    width: 50%;
+    flex-direction: column;
+    max-width: 250px;
+    height: 70%;
+    margin: 0;
+    padding: 0;
+  }
+
   footer {
     display: flex;
     width: 100%;
@@ -1349,10 +1455,12 @@ label {
     width: 30%;
     height: auto;
     position: relative;
-    bottom: 7px;
     align-items: center;
     justify-content: space-around;
     transition: 0.5s;
+    bottom: 10px;
+    margin: 0;
+    padding: 0;
   }
 
   ul .blog:hover {
