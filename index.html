@@ -183,46 +183,44 @@
       <div id="my-works-all">
         <h2>My works</h2>
         <div class="my-works">
-          <ul>
-            <li>
-              <img src="image/my-work-img.png" alt="">
-              <div class="blog">
-                <h2>News Blog</h2>
-                <h3>HTML, SCSS, JS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, placeat harum asperiores suscipit
-                  delectus
-                  officia</p>
+          <ul id="my-works">
+            <template id="card-container">
+              <li>
+                <div class="imgBlog">
+                  <img>
+                </div>
+                <div class="blog">
+                  <h2></h2>
+                  <h3></h3>
+                  <p></p>
                </div>
                <div class="seeblog">
-                <a href="#"><button class="seeMore" type="submit">See more <span>&rarr;</span></button></a>
-              </div>
-            </li>
-            <li>
-              <img src="image/my-work-img.png" alt="">
-              <div class="blog">
-                <h2>News Blog</h2>
-                <h3>HTML, SCSS, JS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, placeat harum asperiores suscipit
-                  delectus
-                  officia</p>
+                  <a href="#"><button class="seeMore" type="submit">See more <span>&rarr;</span></button></a>
                </div>
-               <div class="seeblog">
-                <a href="#"><button class="seeMore" type="submit">See more <span>&rarr;</span></button></a>
-              </div>
-            </li>
-            <li>
-              <img src="image/my-work-img.png" alt="">
-              <div class="blog">
-                <h2>News Blog</h2>
-                <h3>HTML, SCSS, JS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, placeat harum asperiores suscipit
-                  delectus
-                  officia</p>
+               <!-- Modal dinamico -->
+               <div class="modal">
+                <div class="modal-content">
+                  <div class="img-modal">
+                    <img>
+                  </div>
+                  <div class="modal-legend">
+                    <h2></h2>
+                    <h3></h3>
+                    <p></p>
+                  </div>
+                </div>
+
+                <!-- Boton -->
+                <div class="box_closeModal">
+                  <button id="close-modal">
+                    <span>
+                      X                  
+                    </span>
+                  </button>
+                </div>
                </div>
-               <div class="seeblog">
-                <a href="#"><button class="seeMore" type="submit">See more <span>&rarr;</span></button></a>
-              </div>
-            </li>
+              </li>
+            </template>
           </ul>
         </div>
       </div>

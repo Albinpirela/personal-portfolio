@@ -5,6 +5,83 @@ const worksLink = document.querySelector('.works-link');
 const contactLink = document.querySelector('.contact-link');
 const menu = document.querySelector('.hamburger-menu');
 const closeMenu = document.createElement('span');
+const modal = document.querySelector('.modal');
+// const closeModal = document.createElement('span');
+
+const cards = [
+  {
+    title: 'News blog 1 ',
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    img: './image/my-work-img.png',
+  },
+  {
+    title: 'News blog 2',
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    img: './image/my-work-img.png',
+  },
+  {
+    title: 'News blog 3',
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    img: './image/my-work-img.png',
+  },
+  {
+    title: 'News blog',
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+    img: './image/my-work-img.png',
+  },
+];
+const cardsContainer = document.getElementById('card-container').content;
+const insertCards = document.querySelector('.my-works > ul');
+const fragment = document.createDocumentFragment();
+
+// Params (elemento, indice);
+cards.forEach((card, index) => {
+  cardsContainer.querySelector('h2').textContent = card.title;
+  cardsContainer.querySelector('h3').textContent = card.techs;
+  cardsContainer.querySelector('p').textContent = card.description;
+  cardsContainer.querySelector('img').setAttribute('src', card.img);
+  // Asignamos el id de la tarjeta al boton ver mas (0)
+  cardsContainer.querySelector('.seeMore').setAttribute('id', index);
+  const clone = document.importNode(cardsContainer, true);
+  fragment.appendChild(clone);
+});
+insertCards.appendChild(fragment);
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.seeMore')) {
+    e.preventDefault();
+
+    // declare the modal and add the cards container
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'flex';
+
+    // obtenemos el id del boton que se selecciono
+    const idTarget = e.target.getAttribute('id');
+
+    // Almaceno la tarjeta seleccionada segun el indice y la posicion del arreglo cards
+    const cardSelected = cards[idTarget];
+
+    const modalContent = document.querySelector('.modal-content');
+
+    // Agregar contenido de la tarjeta seleccionada al modal dinamicamente
+    modalContent.querySelector('h2').textContent = cardSelected.title;
+    modalContent.querySelector('h3').textContent = cardSelected.techs;
+    modalContent.querySelector('p').textContent = cardSelected.description;
+    modalContent.querySelector('img').setAttribute('src', cardSelected.img);
+    //  modal.appendChild(closeModal);
+    document.querySelector('.modal span').addEventListener('click', () => {
+      document.querySelector('.modal').style.display = 'none';
+    });
+  }
+});
+
+const closeModal = document.getElementById('close-modal');
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
 
 // Add styles to the clouse menu
 
