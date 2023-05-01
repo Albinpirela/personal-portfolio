@@ -5,7 +5,6 @@ const worksLink = document.querySelector('.works-link');
 const contactLink = document.querySelector('.contact-link');
 const menu = document.querySelector('.hamburger-menu');
 const closeMenu = document.createElement('span');
-const modal = document.querySelector('.modal');
 // const closeModal = document.createElement('span');
 
 const cards = [
@@ -38,13 +37,13 @@ const cardsContainer = document.getElementById('card-container').content;
 const insertCards = document.querySelector('.my-works > ul');
 const fragment = document.createDocumentFragment();
 
-// Params (elemento, indice);
+// Params (element, index);
 cards.forEach((card, index) => {
   cardsContainer.querySelector('h2').textContent = card.title;
   cardsContainer.querySelector('h3').textContent = card.techs;
   cardsContainer.querySelector('p').textContent = card.description;
   cardsContainer.querySelector('img').setAttribute('src', card.img);
-  // Asignamos el id de la tarjeta al boton ver mas (0)
+  // We assign the id of the card to the button see more (0)
   cardsContainer.querySelector('.seeMore').setAttribute('id', index);
   const clone = document.importNode(cardsContainer, true);
   fragment.appendChild(clone);
@@ -58,29 +57,23 @@ document.addEventListener('click', (e) => {
     const modal = document.querySelector('.modal');
     modal.style.display = 'flex';
 
-    // obtenemos el id del boton que se selecciono
+    // we get the id of the button that was selected
     const idTarget = e.target.getAttribute('id');
 
-    // Almaceno la tarjeta seleccionada segun el indice y la posicion del arreglo cards
+    // Store the selected card according to the index and position of the array cards
     const cardSelected = cards[idTarget];
 
     const modalContent = document.querySelector('.modal-content');
 
-    // Agregar contenido de la tarjeta seleccionada al modal dinamicamente
+    // Add selected card content to modal dynamically
     modalContent.querySelector('h2').textContent = cardSelected.title;
     modalContent.querySelector('h3').textContent = cardSelected.techs;
     modalContent.querySelector('p').textContent = cardSelected.description;
     modalContent.querySelector('img').setAttribute('src', cardSelected.img);
-    //  modal.appendChild(closeModal);
     document.querySelector('.modal span').addEventListener('click', () => {
       document.querySelector('.modal').style.display = 'none';
     });
   }
-});
-
-const closeModal = document.getElementById('close-modal');
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
 });
 
 // Add styles to the clouse menu
