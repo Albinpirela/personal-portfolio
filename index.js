@@ -5,8 +5,6 @@ const worksLink = document.querySelector('.works-link');
 const contactLink = document.querySelector('.contact-link');
 const menu = document.querySelector('.hamburger-menu');
 const closeMenu = document.createElement('span');
-// const closeModal = document.createElement('span');
-
 const cards = [
   {
     title: 'News blog 1 ',
