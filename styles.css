@@ -909,9 +909,11 @@ label {
 .form-button {
   width: 100px;
   height: 40px;
+  position: relative;
+  top: 30px;
   border-radius: 5px;
   color: var(--background-symbol);
-  margin-bottom: 2.9em;
+  margin-bottom: 3.5em;
   background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
   cursor: pointer;
 }
@@ -1260,7 +1262,9 @@ label {
 
   .contact-form {
     width: 100%;
-    height: 60vh;
+    height: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
     border: 3px solid var(--background-symbol);
     border-radius: 10px;
     margin-bottom: 2em;
@@ -1563,7 +1567,7 @@ label {
 
   #message {
     width: 250px;
-    height: 100%;
+    height: 60%;
     margin-bottom: 0.8em;
   }
 }

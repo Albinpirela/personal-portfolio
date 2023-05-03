@@ -155,8 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    if (e.target.id === 'messager' && !validateMessage(e.target.value)) {
-      showAlert(`the ${e.target.id} can only have a limit of 300 characters.`, e.target.parentElement);
+    if (e.target.id === 'message' && !validateMessage(e.target.value)) {
+      showAlert(`the ${e.target.id} limit is of 300 characters.`, e.target.parentElement);
       return;
     }
 
@@ -174,6 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputEmail = document.querySelector('#email');
   inputEmail.addEventListener('blur', validate);
 
-  const inputMessager = document.querySelector('#messager');
-  inputMessager.addEventListener('blur', validate);
+  const inputMessage = document.querySelector('#message');
+  inputMessage.addEventListener('blur', validate);
 });
