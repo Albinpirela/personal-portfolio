@@ -105,7 +105,7 @@ contactLink.addEventListener('click', hiddenMenu);
 faMenu.addEventListener('click', toggleMenu);
 closeMenu.addEventListener('click', hiddenMenu);
 
-// validacion del formulario
+// form validation
 document.addEventListener('DOMContentLoaded', () => {
   const name = {
     name: '',
@@ -113,67 +113,67 @@ document.addEventListener('DOMContentLoaded', () => {
     message: '',
   };
 
-  function limpiarAlerta(referencia) {
-    // comprueba si ya existe una alerta
+  function cleanAlert(referencia) {
+    // Check if an alert already exists
     const alerta = referencia.querySelector('.alerta');
     if (alerta) {
       alerta.remove();
     }
   }
 
-  function mostrarArlerta(mensaje, referencia) {
-    limpiarAlerta(referencia);
-    // genera el mensaje de error
+  function showAlert(mensaje, referencia) {
+    cleanAlert(referencia);
+    // generates the error message
     const error = document.createElement('p');
     error.classList.add('alerta');
     error.textContent = mensaje;
-    error.style.fontSize = '0.9rem';
+    error.style.fontSize = '1.1rem';
     error.style.textAlign = 'center';
-    // inyectar el error al formulario
+    // inject the error to the form
     referencia.appendChild(error);
   }
 
-  function validarEmail(email) {
+  function validateEmail(email) {
     const regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
     const resultado = regex.test(email);
     return resultado;
   }
 
-  function validarMessage(message) {
-    const regex = /^.{1,300}$/; // Delimitar con / y ajustar el rango a 300
+  function validateMessage(message) {
+    const regex = /^.{1,300}$/; // Delimit with / and set range to 300
     const resultado = regex.test(message);
     return resultado;
   }
 
-  function validar(e) {
+  function validate(e) {
     if (e.target.value.trim() === '') {
-      mostrarArlerta(`EL campo ${e.target.id} es obligatorio`, e.target.parentElement);
+      showAlert(`The field ${e.target.id} is required`, e.target.parentElement);
       return;
     }
-    if (e.target.id === 'email' && !validarEmail(e.target.value)) {
-      mostrarArlerta(`el ${e.target.id} no es valido`, e.target.parentElement);
-      return;
-    }
-
-    if (e.target.id === 'messager' && !validarMessage(e.target.value)) {
-      mostrarArlerta(`el ${e.target.id}  solo puede tener un limite de 300 caracteres`, e.target.parentElement);
+    if (e.target.id === 'email' && !validateEmail(e.target.value)) {
+      showAlert(`the ${e.target.id} It's not valid`, e.target.parentElement);
       return;
     }
 
-    limpiarAlerta(e.target.parentElement);
+    if (e.target.id === 'messager' && !validateMessage(e.target.value)) {
+      showAlert(`the ${e.target.id} can only have a limit of 300 characters.`, e.target.parentElement);
+      return;
+    }
 
-    // asignar los valores al objeto
+    cleanAlert(e.target.parentElement);
+
+    // assign the values to the object
     name[e.target.name] = e.target.value.trim();
   }
 
-  // seleciionamos el los elementos de la interfaz
-  // asignar eventos
+  // select the interface elements
+  // assign events
   const inputNombre = document.querySelector('#name');
-  inputNombre.addEventListener('blur', validar);
+  inputNombre.addEventListener('blur', validate);
 
   const inputEmail = document.querySelector('#email');
-  inputEmail.addEventListener('blur', validar);
+  inputEmail.addEventListener('blur', validate);
 
   const inputMessager = document.querySelector('#messager');
-  inputMessager.addEventListener('blur', validar);
+  inputMessager.addEventListener('blur', validate);
 });
