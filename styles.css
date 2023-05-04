@@ -806,6 +806,7 @@ footer {
 
 .contact-form {
   width: 80%;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -857,7 +858,7 @@ footer {
 input {
   display: flex;
   justify-content: flex-start;
-  width: 250px;
+  width: 100%;
   border: none;
   border-bottom: 3px solid var(--background-symbol);
   background-color: var(--background-box);
@@ -904,13 +905,13 @@ label {
   display: block;
   justify-content: flex-start;
   align-items: start;
+  width: 80%;
+  margin-top: 1em;
 }
 
 .form-button {
   width: 100px;
   height: 40px;
-  position: relative;
-  top: 40px;
   border-radius: 5px;
   color: var(--background-symbol);
   margin-bottom: 3.5em;
@@ -1551,7 +1552,7 @@ label {
   }
 
   .contact-form {
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
@@ -1561,12 +1562,12 @@ label {
   }
 
   #email {
-    width: 250px;
+    width: 100%;
     margin-bottom: 0.8em;
   }
 
   #message {
-    width: 100%;
+    width: 80%;
     height: 50%;
     margin-bottom: 0.8em;
   }

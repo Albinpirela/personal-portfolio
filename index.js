@@ -127,6 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const error = document.createElement('p');
     error.classList.add('alerta');
     error.textContent = mensaje;
+    error.style.margin = '0';
+    error.style.padding = '0';
     error.style.fontSize = '1.1rem';
     error.style.textAlign = 'center';
     // inject the error to the form
