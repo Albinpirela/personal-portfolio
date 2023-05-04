@@ -769,7 +769,7 @@ svg > g {
 
 .seeblog {
   position: absolute;
-  bottom: 1.5em;
+  bottom: 0.5em;
   z-index: 500;
 }
 
