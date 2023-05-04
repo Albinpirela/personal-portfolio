@@ -104,3 +104,78 @@ worksLink.addEventListener('click', hiddenMenu);
 contactLink.addEventListener('click', hiddenMenu);
 faMenu.addEventListener('click', toggleMenu);
 closeMenu.addEventListener('click', hiddenMenu);
+
+// form validation
+document.addEventListener('DOMContentLoaded', () => {
+  const name = {
+    name: '',
+    email: '',
+    message: '',
+  };
+
+  function cleanAlert(referencia) {
+    // Check if an alert already exists
+    const alerta = referencia.querySelector('.alerta');
+    if (alerta) {
+      alerta.remove();
+    }
+  }
+
+  function showAlert(message, reference) {
+    cleanAlert(reference);
+    // generates the error message
+    const error = document.createElement('p');
+    error.classList.add('alerta');
+    error.textContent = message;
+    error.style.margin = '0';
+    error.style.padding = '0';
+    error.style.fontSize = '1.1rem';
+    error.style.textAlign = 'center';
+    // inject the error to the form
+    reference.appendChild(error);
+  }
+
+  function validateEmail(email) {
+    const regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    const resultado = regex.test(email);
+    return resultado;
+  }
+
+  function validateMessage(message) {
+    const regex = /^.{1,300}$/; // Delimit with / and set range to 300
+    const resultado = regex.test(message);
+    return resultado;
+  }
+
+  function validate(e) {
+    if (e.target.value.trim() === '') {
+      showAlert(`The field ${e.target.id} is required`, e.target.parentElement);
+      return;
+    }
+    if (e.target.id === 'email' && !validateEmail(e.target.value)) {
+      showAlert(`the ${e.target.id} It's not valid`, e.target.parentElement);
+      return;
+    }
+
+    if (e.target.id === 'message' && !validateMessage(e.target.value)) {
+      showAlert(`the ${e.target.id} limit is of 300 characters.`, e.target.parentElement);
+      return;
+    }
+
+    cleanAlert(e.target.parentElement);
+
+    // assign the values to the object
+    name[e.target.name] = e.target.value.trim();
+  }
+
+  // select the interface elements
+  // assign events
+  const inputNombre = document.querySelector('#name');
+  inputNombre.addEventListener('blur', validate);
+
+  const inputEmail = document.querySelector('#email');
+  inputEmail.addEventListener('blur', validate);
+
+  const inputMessage = document.querySelector('#message');
+  inputMessage.addEventListener('blur', validate);
+});
