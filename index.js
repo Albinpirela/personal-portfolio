@@ -168,6 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
     data[e.target.name] = e.target.value.trim().toLowerCase();
     localStorage.setItem('data', JSON.stringify(data));
     const storedData = JSON.parse(localStorage.getItem('data'));
+    storedData.name = e.target.value.trim().toLowerCase();
+    storedData.email = e.target.value.trim().toLowerCase();
+    storedData.message = e.target.value.trim().toLowerCase();
   }
 
   // select the interface elements
