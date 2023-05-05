@@ -107,7 +107,7 @@ closeMenu.addEventListener('click', hiddenMenu);
 
 // form validation
 document.addEventListener('DOMContentLoaded', () => {
-  const name = {
+  const data = {
     name: '',
     email: '',
     message: '',
@@ -165,7 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
     cleanAlert(e.target.parentElement);
 
     // assign the values to the object
-    name[e.target.name] = e.target.value.trim();
+    data[e.target.name] = e.target.value.trim().toLowerCase();
+    localStorage.setItem('data', JSON.stringify(data));
+    const storedData = JSON.parse(localStorage.getItem('data'));
   }
 
   // select the interface elements
