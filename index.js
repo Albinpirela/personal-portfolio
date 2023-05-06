@@ -165,12 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
     cleanAlert(e.target.parentElement);
 
     // assign the values to the object
-    data[e.target.name] = e.target.value.trim().toLowerCase();
+    data[e.target.name] = e.target.value.trim();
     localStorage.setItem('data', JSON.stringify(data));
     const storedData = JSON.parse(localStorage.getItem('data'));
-    storedData.name = e.target.value.trim().toLowerCase();
-    storedData.email = e.target.value.trim().toLowerCase();
-    storedData.message = e.target.value.trim().toLowerCase();
+    storedData.name = e.target.value.trim();
+    storedData.email = e.target.value.trim();
+    storedData.message = e.target.value.trim();
   }
 
   // select the interface elements
@@ -183,4 +183,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const inputMessage = document.querySelector('#message');
   inputMessage.addEventListener('blur', validate);
+
+  // Load the data stored in the LocalStorage when loading or refreshing the page
+
+  window.addEventListener('load', () => {
+    const storedData = JSON.parse(localStorage.getItem('data'));
+    if (storedData) {
+      inputNombre.value = storedData.name;
+      inputEmail.value = storedData.email;
+      inputMessage.value = storedData.message;
+    }
+  });
 });
