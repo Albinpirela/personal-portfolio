@@ -1571,8 +1571,9 @@ label {
   }
 
   #message {
-    width: 97.5%;
+    width: 95%;
     height: 50%;
     margin-bottom: 0.8em;
+    border: 3px solid var(--background-symbol);
   }
 }
