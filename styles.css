@@ -905,7 +905,7 @@ label {
   display: block;
   justify-content: flex-start;
   align-items: start;
-  width: 80%;
+  width: 90%;
   margin-top: 1em;
 }
 
@@ -1571,7 +1571,7 @@ label {
   }
 
   #message {
-    width: 80%;
+    width: 97.5%;
     height: 50%;
     margin-bottom: 0.8em;
   }
