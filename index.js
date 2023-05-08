@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // assign the values to the object
     data[e.target.name] = e.target.value.trim();
-    localStorage.clear().setItem('data', JSON.stringify(data));
+    localStorage.setItem('data', JSON.stringify(data));
     const storedData = JSON.parse(localStorage.getItem('data'));
     storedData.name = e.target.value.trim();
     storedData.email = e.target.value.trim();
