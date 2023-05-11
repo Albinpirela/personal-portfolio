@@ -135,6 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
     reference.appendChild(error);
   }
 
+  function validateName(name) {
+    const regex = /^[a-zA-ZÀ-ÿ\s]{1,40}$/; // Delimit with / and set range to 40
+    const resultado = regex.test(name);
+    return resultado;
+  }
+
   function validateEmail(email) {
     const regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
     const resultado = regex.test(email);
@@ -148,10 +154,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function validate(e) {
+
     if (e.target.value.trim() === '') {
       showAlert(`The field ${e.target.id} is required`, e.target.parentElement);
       return;
     }
+
+    if (e.target.id === 'name' && !validateName(e.target.value)) {
+      showAlert(`the ${e.target.id} can only contain letters`, e.target.parentElement);
+      return;
+    }
+    
     if (e.target.id === 'email' && !validateEmail(e.target.value)) {
       showAlert(`the ${e.target.id} It's not valid`, e.target.parentElement);
       return;
@@ -175,8 +188,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // select the interface elements
   // assign events
-  const inputNombre = document.querySelector('#name');
-  inputNombre.addEventListener('blur', validate);
+  const inputName = document.querySelector('#name');
+  inputName.addEventListener('blur', validate);
 
   const inputEmail = document.querySelector('#email');
   inputEmail.addEventListener('blur', validate);
@@ -189,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     const storedData = JSON.parse(localStorage.getItem('data'));
     if (storedData) {
-      inputNombre.value = storedData.name;
+      inputName.value = storedData.name;
       inputEmail.value = storedData.email;
       inputMessage.value = storedData.message;
     }
