@@ -107,12 +107,6 @@ closeMenu.addEventListener('click', hiddenMenu);
 
 // form validation
 document.addEventListener('DOMContentLoaded', () => {
-  const data = {
-    name: '',
-    email: '',
-    message: '',
-  };
-
   function cleanAlert(referencia) {
     // Check if an alert already exists
     const alerta = referencia.querySelector('.alerta');
@@ -153,50 +147,49 @@ document.addEventListener('DOMContentLoaded', () => {
     return resultado;
   }
 
-    function validate(e) {
-      const storedData = JSON.parse(localStorage.getItem('data')) || {};
-    
-      if (e.target.value.trim() === '') {
-        showAlert(`The field ${e.target.id} is required`, e.target.parentElement);
-        return;
-      }
-    
-      if (e.target.id === 'name' && !validateName(e.target.value)) {
-        showAlert(`the ${e.target.id} can only contain letters`, e.target.parentElement);
-        return;
-      }
-      
-      if (e.target.id === 'email' && !validateEmail(e.target.value)) {
-        showAlert(`the ${e.target.id} It's not valid`, e.target.parentElement);
-        return;
-      }
-    
-      if (e.target.id === 'message' && !validateMessage(e.target.value)) {
-        showAlert(`the ${e.target.id} limit is of 300 characters.`, e.target.parentElement);
-        return;
-      }
-    
-      if (e.target.name === 'name') {
-        storedData.name = e.target.value.trim();
-      } else if (e.target.name === 'email') {
-        storedData.email = e.target.value.trim();
-      } else if (e.target.name === 'message') {
-        storedData.message = e.target.value.trim();
-      }
-    
-      localStorage.setItem('data', JSON.stringify(storedData));
-    
-      const inputName = document.querySelector('#name');
-      const inputEmail = document.querySelector('#email');
-      const inputMessage = document.querySelector('#message');
-    
-      // Load the data stored in the LocalStorage when loading or refreshing the page
-      inputName.value = storedData.name || '';
-      inputEmail.value = storedData.email || '';
-      inputMessage.value = storedData.message || '';
-    
-      cleanAlert(e.target.parentElement);
+  function validate(e) {
+    const storedData = JSON.parse(localStorage.getItem('data')) || {};
+    if (e.target.value.trim() === '') {
+      showAlert(`The field ${e.target.id} is required`, e.target.parentElement);
+      return;
     }
+
+    if (e.target.id === 'name' && !validateName(e.target.value)) {
+      showAlert(`the ${e.target.id} can only contain letters`, e.target.parentElement);
+      return;
+    }
+
+    if (e.target.id === 'email' && !validateEmail(e.target.value)) {
+      showAlert(`the ${e.target.id} It's not valid`, e.target.parentElement);
+      return;
+    }
+
+    if (e.target.id === 'message' && !validateMessage(e.target.value)) {
+      showAlert(`the ${e.target.id} limit is of 300 characters.`, e.target.parentElement);
+      return;
+    }
+
+    if (e.target.name === 'name') {
+      storedData.name = e.target.value.trim();
+    } else if (e.target.name === 'email') {
+      storedData.email = e.target.value.trim();
+    } else if (e.target.name === 'message') {
+      storedData.message = e.target.value.trim();
+    }
+
+    localStorage.setItem('data', JSON.stringify(storedData));
+
+    const inputName = document.querySelector('#name');
+    const inputEmail = document.querySelector('#email');
+    const inputMessage = document.querySelector('#message');
+
+    // Load the data stored in the LocalStorage when loading or refreshing the page
+    inputName.value = storedData.name || '';
+    inputEmail.value = storedData.email || '';
+    inputMessage.value = storedData.message || '';
+
+    cleanAlert(e.target.parentElement);
+  }
 
   // select the interface elements
   // assign events
