@@ -55,7 +55,7 @@
         <h1>Albin pirela</h1>
         <h2>Frontend Developer</h2>
         <p>frontend developer looking for ideas and projects for himself and others</p>
-        <a href="image/albincurriculon.pdf" download>Get my resume</a>
+        <a href="cv/CV-albin-pirela.pdf" download>Get my resume</a>
       </div>
       <div class="headline-img">
         <p>let button-menu = document.querySelector("header-button");
@@ -183,46 +183,44 @@
       <div id="my-works-all">
         <h2>My works</h2>
         <div class="my-works">
-          <ul>
-            <li>
-              <img src="image/my-work-img.png" alt="">
-              <div class="blog">
-                <h2>News Blog</h2>
-                <h3>HTML, SCSS, JS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, placeat harum asperiores suscipit
-                  delectus
-                  officia</p>
+          <ul id="my-works">
+            <template id="card-container">
+              <li>
+                <div class="imgBlog">
+                  <img>
+                </div>
+                <div class="blog">
+                  <h2></h2>
+                  <h3></h3>
+                  <p></p>
                </div>
                <div class="seeblog">
-                <a href="#"><button class="seeMore" type="submit">See more <span>&rarr;</span></button></a>
-              </div>
-            </li>
-            <li>
-              <img src="image/my-work-img.png" alt="">
-              <div class="blog">
-                <h2>News Blog</h2>
-                <h3>HTML, SCSS, JS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, placeat harum asperiores suscipit
-                  delectus
-                  officia</p>
+                  <a href="#"><button class="seeMore" type="submit">See more <span>&rarr;</span></button></a>
                </div>
-               <div class="seeblog">
-                <a href="#"><button class="seeMore" type="submit">See more <span>&rarr;</span></button></a>
-              </div>
-            </li>
-            <li>
-              <img src="image/my-work-img.png" alt="">
-              <div class="blog">
-                <h2>News Blog</h2>
-                <h3>HTML, SCSS, JS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, placeat harum asperiores suscipit
-                  delectus
-                  officia</p>
+               <!-- Modal dinamico -->
+               <div class="modal">
+                <div class="modal-content">
+                  <div class="img-modal">
+                    <img>
+                  </div>
+                  <div class="modal-legend">
+                    <h2></h2>
+                    <h3></h3>
+                    <p></p>
+                  </div>
+                </div>
+
+                <!-- Boton -->
+                <div class="box_closeModal">
+                  <button id="close-modal">
+                    <span>
+                      X                  
+                    </span>
+                  </button>
+                </div>
                </div>
-               <div class="seeblog">
-                <a href="#"><button class="seeMore" type="submit">See more <span>&rarr;</span></button></a>
-              </div>
-            </li>
+              </li>
+            </template>
           </ul>
         </div>
       </div>
@@ -285,36 +283,23 @@
         </div>
       </div>
       <form action="https://formspree.io/f/mnqybjby" method="POST" enctype="multipart/form-data" class="contact-form">
-
-        <div class="box">
-          <label for="name">
+        <label for="name">
             Name
             <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="30" required>
           </label>
-
-          <label for="lastname">
-            Last name
-            <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" maxlength="30" required>
-          </label>
-
-        </div>
-
-        <div class="box-message">
-
           <label for="email">
             Email
             <input type="email" id="email" name="email" placeholder="Enter your email address" required>
           </label>
           <label for="message">
             Message
-            <textarea name="message" id="messager" placeholder="Enter your message" maxlength="500" required></textarea>
+            <textarea name="message" id="message" placeholder="Enter your message" maxlength="500" required></textarea>
           </label>
-        </div>
-        <button class="form-button" type="submit">Submit</button>
-
+           <button class="form-button" type="submit"disabled>Submit</button>
       </form>
     </footer>
 
   </div>
 </body>
+<script src="index.js"></script>
 </html>
