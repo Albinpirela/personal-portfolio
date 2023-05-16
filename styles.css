@@ -921,6 +921,7 @@ label {
   color: var(--background-symbol);
   background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
   cursor: pointer;
+  opacity: 0.2;
 }
 
 .contact-form > .form-button:active {

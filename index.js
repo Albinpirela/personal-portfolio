@@ -147,6 +147,28 @@ document.addEventListener('DOMContentLoaded', () => {
     return resultado;
   }
 
+  function updateSubmitButtonState() {
+    const inputName = document.querySelector('#name');
+    const inputEmail = document.querySelector('#email');
+    const inputMessage = document.querySelector('#message');
+    const btnSubmit = document.querySelector('.form-button');
+    if (inputName.value === '' || inputEmail.value === '' || inputMessage.value === '') {
+      btnSubmit.disabled = true;
+      btnSubmit.style.opacity = '0.2';
+    } else {
+      const isNameValid = validateName(inputName.value);
+      const isEmailValid = validateEmail(inputEmail.value);
+      const isMessageValid = validateMessage(inputMessage.value);
+      if (isNameValid && isEmailValid && isMessageValid) {
+        btnSubmit.disabled = false;
+        btnSubmit.style.opacity = '1';
+      } else {
+        btnSubmit.disabled = true;
+        btnSubmit.style.opacity = '0.2';
+      }
+    }
+  }
+
   function validate(e) {
     const storedData = JSON.parse(localStorage.getItem('data')) || {};
     if (e.target.value.trim() === '') {
@@ -176,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (e.target.name === 'message') {
       storedData.message = e.target.value.trim();
     }
-
     localStorage.setItem('data', JSON.stringify(storedData));
 
     const inputName = document.querySelector('#name');
@@ -189,6 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     inputMessage.value = storedData.message || '';
 
     cleanAlert(e.target.parentElement);
+    updateSubmitButtonState();
   }
 
   // select the interface elements
@@ -211,5 +233,48 @@ document.addEventListener('DOMContentLoaded', () => {
       inputEmail.value = storedData.email;
       inputMessage.value = storedData.message;
     }
+  });
+
+  function resetFormAndLocalStorage() {
+    // Limpiar el formulario
+    const inputName = document.querySelector('#name');
+    const inputEmail = document.querySelector('#email');
+    const inputMessage = document.querySelector('#message');
+    inputName.value = '';
+    inputEmail.value = '';
+    inputMessage.value = '';
+    // Limpiar el almacenamiento local
+    localStorage.removeItem('data');
+  }
+
+  function sendingForm() {
+    const form = document.querySelector('.contact-form');
+    const btnSubmit = form.querySelector('.form-button');
+    const messageSusses = document.createElement('p');
+    messageSusses.textContent = 'Sent successfully';
+    messageSusses.style.color = 'green';
+
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        btnSubmit.parentNode.insertBefore(messageSusses, btnSubmit);
+        btnSubmit.disabled = true;
+      } else {
+        messageSusses.textContent = 'An error has occurred.';
+        messageSusses.style.color = 'red';
+      }
+    };
+    xhr.send(new FormData(form));
+  }
+
+  const form = document.querySelector('.contact-form');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    sendingForm();
+    resetFormAndLocalStorage();
   });
 });
