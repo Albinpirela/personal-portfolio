@@ -68,6 +68,7 @@ document.addEventListener('click', (e) => {
     modalContent.querySelector('h3').textContent = cardSelected.techs;
     modalContent.querySelector('p').textContent = cardSelected.description;
     modalContent.querySelector('img').setAttribute('src', cardSelected.img);
+    modalContent.querySelector('img').setAttribute('alt', cardSelected.img);
     document.querySelector('.modal span').addEventListener('click', () => {
       document.querySelector('.modal').style.display = 'none';
     });
