@@ -68,6 +68,7 @@ document.addEventListener('click', (e) => {
     modalContent.querySelector('h3').textContent = cardSelected.techs;
     modalContent.querySelector('p').textContent = cardSelected.description;
     modalContent.querySelector('img').setAttribute('src', cardSelected.img);
+    modalContent.querySelector('img').setAttribute('alt', cardSelected.img);
     document.querySelector('.modal span').addEventListener('click', () => {
       document.querySelector('.modal').style.display = 'none';
     });
@@ -107,12 +108,6 @@ closeMenu.addEventListener('click', hiddenMenu);
 
 // form validation
 document.addEventListener('DOMContentLoaded', () => {
-  const name = {
-    name: '',
-    email: '',
-    message: '',
-  };
-
   function cleanAlert(referencia) {
     // Check if an alert already exists
     const alerta = referencia.querySelector('.alerta');
@@ -135,6 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
     reference.appendChild(error);
   }
 
+  function validateName(name) {
+    const regex = /^[a-zA-ZÀ-ÿ\s]{1,40}$/; // Delimit with / and set range to 40
+    const resultado = regex.test(name);
+    return resultado;
+  }
+
   function validateEmail(email) {
     const regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
     const resultado = regex.test(email);
@@ -147,11 +148,40 @@ document.addEventListener('DOMContentLoaded', () => {
     return resultado;
   }
 
+  function updateSubmitButtonState() {
+    const inputName = document.querySelector('#name');
+    const inputEmail = document.querySelector('#email');
+    const inputMessage = document.querySelector('#message');
+    const btnSubmit = document.querySelector('.form-button');
+    if (inputName.value === '' || inputEmail.value === '' || inputMessage.value === '') {
+      btnSubmit.disabled = true;
+      btnSubmit.style.opacity = '0.2';
+    } else {
+      const isNameValid = validateName(inputName.value);
+      const isEmailValid = validateEmail(inputEmail.value);
+      const isMessageValid = validateMessage(inputMessage.value);
+      if (isNameValid && isEmailValid && isMessageValid) {
+        btnSubmit.disabled = false;
+        btnSubmit.style.opacity = '1';
+      } else {
+        btnSubmit.disabled = true;
+        btnSubmit.style.opacity = '0.2';
+      }
+    }
+  }
+
   function validate(e) {
+    const storedData = JSON.parse(localStorage.getItem('data')) || {};
     if (e.target.value.trim() === '') {
       showAlert(`The field ${e.target.id} is required`, e.target.parentElement);
       return;
     }
+
+    if (e.target.id === 'name' && !validateName(e.target.value)) {
+      showAlert(`the ${e.target.id} can only contain letters`, e.target.parentElement);
+      return;
+    }
+
     if (e.target.id === 'email' && !validateEmail(e.target.value)) {
       showAlert(`the ${e.target.id} It's not valid`, e.target.parentElement);
       return;
@@ -162,20 +192,90 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    cleanAlert(e.target.parentElement);
+    if (e.target.name === 'name') {
+      storedData.name = e.target.value.trim();
+    } else if (e.target.name === 'email') {
+      storedData.email = e.target.value.trim();
+    } else if (e.target.name === 'message') {
+      storedData.message = e.target.value.trim();
+    }
+    localStorage.setItem('data', JSON.stringify(storedData));
 
-    // assign the values to the object
-    name[e.target.name] = e.target.value.trim();
+    const inputName = document.querySelector('#name');
+    const inputEmail = document.querySelector('#email');
+    const inputMessage = document.querySelector('#message');
+
+    // Load the data stored in the LocalStorage when loading or refreshing the page
+    inputName.value = storedData.name || '';
+    inputEmail.value = storedData.email || '';
+    inputMessage.value = storedData.message || '';
+
+    cleanAlert(e.target.parentElement);
+    updateSubmitButtonState();
   }
 
   // select the interface elements
   // assign events
-  const inputNombre = document.querySelector('#name');
-  inputNombre.addEventListener('blur', validate);
+  const inputName = document.querySelector('#name');
+  inputName.addEventListener('blur', validate);
 
   const inputEmail = document.querySelector('#email');
   inputEmail.addEventListener('blur', validate);
 
   const inputMessage = document.querySelector('#message');
   inputMessage.addEventListener('blur', validate);
+
+  // Load the data stored in the LocalStorage when loading or refreshing the page
+
+  window.addEventListener('load', () => {
+    const storedData = JSON.parse(localStorage.getItem('data'));
+    if (storedData) {
+      inputName.value = storedData.name;
+      inputEmail.value = storedData.email;
+      inputMessage.value = storedData.message;
+    }
+  });
+
+  function resetFormAndLocalStorage() {
+    // Limpiar el formulario
+    const inputName = document.querySelector('#name');
+    const inputEmail = document.querySelector('#email');
+    const inputMessage = document.querySelector('#message');
+    inputName.value = '';
+    inputEmail.value = '';
+    inputMessage.value = '';
+    // Limpiar el almacenamiento local
+    localStorage.removeItem('data');
+  }
+
+  function sendingForm() {
+    const form = document.querySelector('.contact-form');
+    const btnSubmit = form.querySelector('.form-button');
+    const messageSusses = document.createElement('p');
+    messageSusses.textContent = 'Sent successfully';
+    messageSusses.style.color = 'green';
+
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        btnSubmit.parentNode.insertBefore(messageSusses, btnSubmit);
+        btnSubmit.disabled = true;
+      } else {
+        messageSusses.textContent = 'An error has occurred.';
+        messageSusses.style.color = 'red';
+      }
+    };
+    xhr.send(new FormData(form));
+  }
+
+  const form = document.querySelector('.contact-form');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    sendingForm();
+    resetFormAndLocalStorage();
+  });
 });

@@ -905,7 +905,7 @@ label {
   display: block;
   justify-content: flex-start;
   align-items: start;
-  width: 80%;
+  width: 90%;
   margin-top: 1em;
 }
 
@@ -921,6 +921,7 @@ label {
   color: var(--background-symbol);
   background: linear-gradient(to bottom, rgba(104, 96, 89, 0.3), transparent);
   cursor: pointer;
+  opacity: 0.2;
 }
 
 .contact-form > .form-button:active {
@@ -1571,8 +1572,9 @@ label {
   }
 
   #message {
-    width: 80%;
+    width: 95%;
     height: 50%;
     margin-bottom: 0.8em;
+    border: 3px solid var(--background-symbol);
   }
 }
